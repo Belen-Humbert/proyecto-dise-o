@@ -1,5 +1,7 @@
 import "../Styles/FooterS.css";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import IconButton from '@mui/material/IconButton';
+/* import Stack from '@mui/material/Stack';
+ */import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -9,7 +11,7 @@ function Pie() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h2>Infinito Web Design Studio</h2>
+          <h2>AuditaWeb Solutions</h2>
         </div>
         <div className="footer-center">
           <ul className="footer-menu">
