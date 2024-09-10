@@ -3,7 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
+import Tarjeta from "./components/card";
 
 function App() {
   return (
@@ -72,13 +72,16 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h2 className="section-heading">Awesomeness Portfolio.</h2>
+              <h2 className="section-heading">Audirotias Realizadas</h2>
               <h3 id="below-section" className="section-subheading text-muted">
-                Below you'll find some of my recent work.
+                Ultimas auditorias realizadas
               </h3>
             </div>
           </div>
         </div>
+        <Tarjeta/><br />
+        <Tarjeta/><br />
+        <Tarjeta/>
       </section>
       <a name="contact" />
       <div className="banner">
@@ -195,7 +198,7 @@ function App() {
           </ul>
         </div>
       </div>
-    </footer>      {/* */}
+    </footer>   
     </>
   );
 }
