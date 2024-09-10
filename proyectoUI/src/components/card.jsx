@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-export default function Tarjeta() {
+export default function Tarjeta({empresa}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -17,11 +17,10 @@ export default function Tarjeta() {
         />
         <CardContent>
           <Typography gutterBottom  variant="h5" component="div">
-            Lizard
+            {empresa.name}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {empresa.descript}
           </Typography>
         </CardContent>
       </CardActionArea>
