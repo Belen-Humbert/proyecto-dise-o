@@ -6,9 +6,6 @@ html {
 }
 
 body,
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -16,32 +13,20 @@ h6 {
     font-weight: 700;
 }
 
-.topnav {
-    font-size: 16px;
-    border-bottom: 1px outset rgba(192, 192, 192, 0.5);
-    background: rgba(192, 192, 192, 0.9);
-    box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
-}
-.topnav ul.navbar-nav li a {
-background: rgba(28, 28, 28, 0.1);
-color: #000;
-}
-.topnav ul.navbar-nav li a:hover,
-.topnav ul.navbar-nav li a:focus
- {
-background: rgba(255, 255, 255, 0.5);
-color: #000;
+h1 {
+  font-family: 'Raleway Dots', cursive;
 }
 
-.topnav .navbar-brand {
-  background: rgba(28, 28, 28, 0.0);
-  color: #000;
+h2 {
+  font-family: 'Raleway Dots', cursive;
 }
 
-.topnav .navbar-brand:hover,
-.topnav .navbar-brand:focus {
-  background: rgba(255, 255, 255, 0.5);
-  color: #000;
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
 }
 
 .lead {
@@ -305,21 +290,6 @@ section {
   }
 }
 
-/*.col-md-4 {
-  overflow: hidden;
-  display: inline-block;
-  border: 1px outset rgba(255, 255, 255, 0.6);
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 1%;
-  text-align: center;
-  box-shadow: 2px 3px 2px rgba(0,0,0,0.3);
-  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
-  cursor: pointer;
-}
-.col-md-4:hover {
-  transition: 0.5s;
-  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);  
-}*/
 
 .section-heading-spacer {
     float: left;
@@ -327,55 +297,9 @@ section {
     border-top: 3px solid #e7e7e7;
 }
 
-.banner {
-    padding: 100px 0;
-    background: url('https://68.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 755px;
-}
-
-.bg-overlay4 {
-  margin-top: -100px;
-  padding: 100px 0;
-  background: rgba(255,255,255, 0.3);
-  height: 755px;
-}
-
-.banner ul {
-    margin-bottom: 0;
-}
-
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-h2.connect {
-   margin: 0;
-   color: rgba(0, 0, 0, 0.9);
-}
 
 .footer {
-  background-color: #333;
+  background-color: #84a5c8;
   color: white;
   padding: 20px 0;
   font-family: Arial, sans-serif;
@@ -443,4 +367,35 @@ h2.connect {
 
 .footer-socials a:hover {
   color: inherit; 
+}
+
+
+/* App.css */
+
+/* Navigation */
+.navbar {
+  background-color: #84a5c8;
+  padding: 1rem;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
 }
