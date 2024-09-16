@@ -8,19 +8,20 @@ import Tarjeta from "./components/card";
 function App() {
   return (
     <>
-      {/* Update 29.9.2015: <head></head> and <body></body> tags are included in this pen for quick copy/paste in case you to try this challenge offline */}
-      <title>Infinito Web Design Studio</title>
-      {/* HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries */}
-      {/* WARNING: Respond.js doesn't work if you view the page via file:// */}
-      {/*[if lt IE 9]>
-  
-  
-    <![endif]*/}
+      <title>AuditaWeb Solutions</title>
+
       {/* Navigation */}
+      <nav className="navbar">
+        <ul className="navbar-menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#portfolio">Auditorías Realizadas</a></li>
+          <li><a href="#team">El Equipo</a></li>
+          <li><a href="#footer">Contáctanos</a></li>
+        </ul>
+      </nav>
 
       {/* Header */}
-      <a name="home" />
-      <div className="intro-header">
+      <div id="home" className="intro-header">
         <div className="bg-overlay">
           <div className="container">
             <div className="row">
@@ -36,9 +37,9 @@ function App() {
         </div>
       </div>
       {/* /.intro-header */}
+
       {/* Page Content */}
-      <a name="about" />
-      <div className="content-section-a">
+      <div id="about" className="content-section-a">
         <div className="bg-overlay2">
           <div className="container">
             <div className="row">
@@ -66,14 +67,13 @@ function App() {
         </div>
       </div>
       {/* Portfolio Grid Section */}
-      <a name="portfolio" />
       <section id="portfolio" className="bg-light-gray bounds">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h2 className="section-heading">Audirotias Realizadas</h2>
+              <h2 className="section-heading">Auditorías Realizadas</h2>
               <h3 id="below-section" className="section-subheading text-muted">
-                Ultimas auditorias realizadas
+                Últimas auditorías realizadas
               </h3>
             </div>
           </div>
@@ -90,76 +90,24 @@ function App() {
         />
         </div>
       </section>
-      <a name="contact" />
-      <div className="banner">
-        <div className="bg-overlay4">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
-                <h2 className="connect">
-                  Check out some of my latest work at{" "}
-                  <a
-                    className="link-footer"
-                    target="_blank"
-                    href="https://www.facebook.com/Virtual-Dawn-802163799892155/"
-                  >
-                    Virtual-Dawn's Facebook page.
-                  </a>
-                </h2>
-              </div>
-              <br />
-              <div className="col-lg-6">
-                <ul className="list-inline banner-social-buttons">
-                  <li>
-                    <a
-                      href="https://twitter.com/Ferreir4Thiago"
-                      target="_blank"
-                      className="btn btn-default btn-lg"
-                    >
-                      <i className="fa fa-twitter fa-fw" />{" "}
-                      <span className="network-name">Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/ThiagoFerreir4"
-                      target="_blank"
-                      className="btn btn-default btn-lg "
-                    >
-                      <i className="fa fa-github fa-fw" />{" "}
-                      <span className="network-name">Github</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/thiagoferreir4"
-                      target="_blank"
-                      className="btn btn-default btn-lg"
-                    >
-                      <i className="fa fa-linkedin fa-fw" />{" "}
-                      <span className="network-name">Linkedin</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.freecodecamp.com/thiagoferreira"
-                      target="_blank"
-                      className="btn btn-default btn-lg"
-                    >
-                      <i className="fa fa-free-code-camp fa-fw" />{" "}
-                      <span className="network-name">freeCodeCamp</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+
+      {/* Team Section */}
+      <div id="team" className="team-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2 className="section-heading">Nuestro Equipo</h2>
+              <h3 className="section-subheading text-muted">
+                Conoce a los expertos detrás de AuditaWeb Solutions
+              </h3>
             </div>
-            {/* /.container */}
           </div>
         </div>
       </div>
-      {/* /.banner */}
+      {/* /.team-section */}
+
       {/* Footer */}
-      <footer className="footer">
+      <footer id="footer" className="footer">
         <div className="footer-container">
           <div className="footer-left">
             <h2>AuditaWeb Solutions</h2>
@@ -199,6 +147,7 @@ function App() {
           </div>
         </div>
       </footer>
+      {/* /.footer */}
     </>
   );
 }
