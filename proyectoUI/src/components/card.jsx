@@ -7,7 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 export default function Tarjeta({empresa}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 600 }}>
       <CardActionArea>
         <CardMedia
          component="img"

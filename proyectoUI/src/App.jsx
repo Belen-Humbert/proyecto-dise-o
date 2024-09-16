@@ -78,9 +78,17 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="card-align">
         <Tarjeta
           empresa={{ name: "lila software studio", descript: "odokdkkdkkdkd" }}
         />
+        <Tarjeta
+          empresa={{ name: "lila software studio", descript: "odokdkkdkkdkd" }}
+        />
+        <Tarjeta
+          empresa={{ name: "lila software studio", descript: "odokdkkdkkdkd" }}
+        />
+        </div>
       </section>
       <a name="contact" />
       <div className="banner">
@@ -160,14 +168,7 @@ function App() {
             <ul className="footer-menu">
               <li>About</li>
               <li>Inicio</li>
-              <li>
-                <details>
-                  <summary>Contacto</summary>
-                  <li>261360238</li>
-                  <li>233231312</li>
-                  <li>alwwksmxskxS</li>
-                </details>
-              </li>
+              <li>Contacto</li>
               <li>Auditorías</li>
             </ul>
             <p>© 2024 IWDS. All rights reserved.</p>
