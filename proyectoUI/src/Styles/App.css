@@ -369,17 +369,6 @@ section {
   color: inherit; 
 }
 
-<<<<<<< HEAD
-.card-align {
-
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Usar toda la altura de la ventana */
-
-
-}
-=======
 
 /* App.css */
 
@@ -410,4 +399,22 @@ section {
 .navbar-menu a:hover {
   text-decoration: underline;
 }
->>>>>>> 32f43e9a19d9ccee318026b35e207d2996d11176
+
+.card-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos para la tarjeta individual */
+.card-align > * {  /* Esto selecciona los hijos directos de card-align, que serían tus componentes Tarjeta */
+  transition: transform 0.3s ease;  /* Transición suave para el efecto de zoom */
+}
+
+.card-align > *:hover {
+  transform: scale(1.05);  /* Aumenta el tamaño en un 5% al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Opcional: añade una sombra para mayor efecto */
+}
