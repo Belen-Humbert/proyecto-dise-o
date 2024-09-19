@@ -11,9 +11,9 @@ export default function Tarjeta({empresa}) {
       <CardActionArea>
         <CardMedia
          component="img"
-          height="140"
-          image="./public/descargar (3).jpg"
-          alt="green iguana"
+          height="180"
+          image="/descargar (3).jpg"
+          alt={empresa.name}
         />
         <CardContent>
           <Typography gutterBottom  variant="h5" component="div">

@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/nav";  // Importar la barra de navegación
 
-const Home = () => {
+const Lila = () => {
   return (
     <>
       <Nav />  {/* Incluir la barra de navegación */}
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default lila;
+export default Lila;
