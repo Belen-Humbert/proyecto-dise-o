@@ -96,6 +96,22 @@ function Home() {
               }}
             />
           </Link>
+          <Link to="/lila">
+            <Tarjeta
+              empresa={{
+                name: "lila software studio",
+                descript: "odokdkkdkkdkd",
+              }}
+            />
+          </Link>
+          <Link to="/lila">
+            <Tarjeta
+              empresa={{
+                name: "lila software studio",
+                descript: "odokdkkdkkdkd",
+              }}
+            />
+          </Link>
         </div>
       </section>
 
