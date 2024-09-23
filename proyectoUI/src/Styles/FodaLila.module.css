@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos generales */
+.fodaLilaContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título principal */
+.fodaLilaTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #936A9F !important; 
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Texto introductorio */
+.fodaLilaIntroText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666 !important;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: block;
+}
+
+/* Sección FODA */
+.fodaLilaSection {
+  margin-top: 50px;
+}
+
+/* Tarjetas */
+.fodaLilaPaper {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de movimiento suave sin aumento de tamaño */
+.fodaLilaPaper:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Subtítulos */
+.fodaLilaSubtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #936A9F !important; 
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Texto en las tarjetas */
+.fodaLilaText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Imagen */
+.fodaLilaImageContainer {
+  margin-top: 50px;
+}
+
+.fodaLilaImage {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.fodaLilaImage:hover {
+  transform: scale(1.05); 
+}
