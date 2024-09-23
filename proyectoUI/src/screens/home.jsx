@@ -3,17 +3,18 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Tarjeta from "../components/tarjeta";
-import "../Styles/Home.css";
 import { Link } from "react-router-dom";
+import styles from "../Styles/Home.module.css"; // Importamos el módulo CSS
 
 function Home() {
   return (
     <>
+    <div className={styles.homeContainer}> 
       <title>AuditaWeb Solutions</title>
 
       {/* Navigation */}
-      <nav className="navbar">
-        <ul className="navbar-menu">
+      <nav className={styles.navbar}>
+        <ul className={styles.navbarMenu}>
           <li>
             <a href="#home">Inicio</a>
           </li>
@@ -30,64 +31,48 @@ function Home() {
       </nav>
 
       {/* Header */}
-      <div id="home" className="intro-header">
-        <div className="bg-overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="intro-message">
-                  <h1>AuditaWeb Solutions</h1>
-                  <h3>Potenciamos tu negocio, aseguramos tu futuro</h3>
-                </div>
+      <div id="home">
+        <div className={styles.bgOverlay}>
+          <div>
+            <div className={styles.row}>
+              <div className={styles.introMessage}>
+                <h1>AuditaWeb Solutions</h1>
+                <h3>Potenciamos tu negocio, aseguramos tu futuro</h3>
               </div>
             </div>
           </div>
-          {/* /.container */}
         </div>
       </div>
-      {/* /.intro-header */}
 
       {/* Page Content */}
-      <div id="about" className="content-section-a">
-        <div className="bg-overlay2">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-5 col-sm-6">
-                <div className="clearfix" />
-                <h2 className="section-heading">AuditaWeb Solutions</h2>
-                <br />
-                <p className="lead">
-                  En AuditaWeb Solutions, somos especialistas en brindar
-                  soluciones integrales a empresas que buscan optimizar su
-                  funcionamiento y expandir su presencia en el mundo digital.
-                  Ofrecemos servicios de auditoría externa para garantizar la
-                  eficiencia y el cumplimiento de las normativas en todos los
-                  procesos de tu organización. Además, diseñamos y desarrollamos
-                  páginas web personalizadas que reflejan la identidad de tu
-                  marca y te conectan con tus clientes de manera efectiva. Con
-                  nuestro enfoque multidisciplinario, ayudamos a las empresas a
-                  crecer de manera segura y confiable, asegurando su éxito en el
-                  mercado.
-                </p>
-              </div>
-            </div>
+      <div id="about" className={styles.contentSectionA}>
+        <div className={styles.bgOverlay2}>
+          <div>
+            <h2 className={styles.sectionHeading}>AuditaWeb Solutions</h2>
+            <br />
+            <p className={styles.lead}>
+              En AuditaWeb Solutions, somos especialistas en brindar soluciones
+              integrales a empresas que buscan optimizar su funcionamiento y
+              expandir su presencia en el mundo digital. Ofrecemos servicios de
+              auditoría externa para garantizar la eficiencia y el cumplimiento
+              de las normativas en todos los procesos de tu organización.
+              Además, diseñamos y desarrollamos páginas web personalizadas que
+              reflejan la identidad de tu marca y te conectan con tus clientes
+              de manera efectiva. Con nuestro enfoque multidisciplinario,
+              ayudamos a las empresas a crecer de manera segura y confiable,
+              asegurando su éxito en el mercado.
+            </p>
           </div>
-          {/* /.container */}
         </div>
       </div>
+
       {/* Portfolio Grid Section */}
-      <section id="portfolio" className="bg-light-gray bounds">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-heading">Auditorías Realizadas</h2>
-              <h3 id="below-section" className="section-subheading text-muted">
-                Últimas auditorías realizadas
-              </h3>
-            </div>
-          </div>
+      <section>
+        <div>
+          <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
+          <h3>Últimas auditorías realizadas</h3>
         </div>
-        <div className="card-align">
+        <div className={styles.cardAlign}>
           <Link to="/lila">
             <Tarjeta
               empresa={{
@@ -116,28 +101,23 @@ function Home() {
       </section>
 
       {/* Team Section */}
-      <div id="team" className="team-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-heading">Nuestro Equipo</h2>
-              <h3 className="section-subheading text-muted">
-                Conoce a los expertos detrás de AuditaWeb Solutions
-              </h3>
-            </div>
-          </div>
+      <div id="team" className={styles.teamSection}>
+        <div>
+          <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
+          <h3 className={`${styles.sectionSubheading} text-muted`}>
+            Conoce a los expertos detrás de AuditaWeb Solutions
+          </h3>
         </div>
       </div>
-      {/* /.team-section */}
 
       {/* Footer */}
-      <footer id="footer" className="footer">
-        <div className="footer-container">
-          <div className="footer-left">
+      <footer id="footer" className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerLeft}>
             <h2>AuditaWeb Solutions</h2>
           </div>
-          <div className="footer-center">
-            <ul className="footer-menu">
+          <div className={styles.footerCenter}>
+            <ul className={styles.footerMenu}>
               <li>About</li>
               <li>Inicio</li>
               <li>Contacto</li>
@@ -145,8 +125,8 @@ function Home() {
             </ul>
             <p>© 2024 IWDS. All rights reserved.</p>
           </div>
-          <div className="footer-right">
-            <ul className="footer-socials">
+          <div className={styles.footerRight}>
+            <ul className={styles.footerSocials}>
               <li>
                 <a href="https://www.facebook.com/sebastian.montuori.1">
                   <FacebookIcon />
@@ -171,7 +151,7 @@ function Home() {
           </div>
         </div>
       </footer>
-      {/* /.footer */}
+      </div>
     </>
   );
 }
