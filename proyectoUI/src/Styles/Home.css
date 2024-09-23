@@ -1,119 +1,98 @@
-body,
-html {
-    width: 100%;
-    height: 100%;
-    
+/* Asegurar que el fondo cubra todo y no haya margen o relleno */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total del elemento */
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1d; /* O puedes usar #2B2B2B */
+  color: #CCCCCC; /* Texto blanco para que sea legible en el fondo oscuro */
 }
 
-body,
-h4,
-h5,
-h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-}
 
-h1 {
-  font-family: 'Raleway Dots', cursive;
-}
-
-h2 {
-  font-family: 'Raleway Dots', cursive;
-}
-
-h3 {
-  font-family: 'Poppins', sans-serif;
-}
-
-p {
-  font-family: 'Nunito', sans-serif;
-}
-
-.lead {
-    font-size: 18px;
-    font-weight: 400;
-}
 /*top background*/
-.intro-header { 
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    background: url('https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 855px;
-}
+/* .intro-header { 
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! 
+  padding-bottom: 50px;
+  background: url('/imagen1.webp') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+}*/
 .bg-overlay {
-  background:rgba(0,0,0, 0.3);
-  height: 855px;
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
 }
 
 .intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 /*Big header*/
 .intro-message > h1 {
-    margin-top: -50px;
-    text-shadow: 2px 1px 2px #000;
-    font-size: 5em;
-    color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: -50px;
+  text-shadow: 2px 1px 2px #1a1818;
+  font-size: 5em;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.intro-divider {
-    width: 400px;
+/* .intro-divider {
+    width: 1000px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
-}
+} */
 /*small header*/
 .intro-message > h3 {
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  text-align: center;
+
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   color: black;
 }
 
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
+@media (max-width: 767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
 
-    .intro-message > h1 {
-        font-size: 3em;
-    }
+  .intro-message > h1 {
+    font-size: 3em;
+  }
 
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
+  ul.intro-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
 
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
 
-    .intro-divider {
-        width: 100%;
-    }
+  .intro-divider {
+    width: 100%;
+  }
 }
 /*line*/
-hr.intro-divider {
-  border: 1px outset rgba(255, 255, 255, 0.2);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-  width: 100%;
-}
+/* hr.intro-divider {
+  border: 1px outset rgba(9, 8, 8, 0.2);
+  box-shadow: 1px 1px 1px rgba(247, 7, 7, 0.952);
+  width: 1000%;
+} */
 /* social buttons */
-.btn {
+/* .btn {
   display: inline-block;
-  color: #000;
-  border: 2px outset rgba(0, 0, 0, 0.9);
-  background: #C0C0C0;
+  color: #f10505;
+  border: 2px outset rgba(4, 252, 13, 0.9);
+  background: #f602c5;
   text-shadow: 1px 1px 1px rgba(0,0,0, 20);
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 3px rgba(2, 241, 121, 0.5);
   letter-spacing: 2px;
   transition: 0.2s;
-}
+} */
 
-.btn:hover {
-	color: #fff;
+/* .btn:hover {
+	color: #f80606;
   border: 2px outset rgba(0, 0, 0, 0.9);
   background: rgba(0,0,0, 0.9);
   transform:scale(1.1);
@@ -121,81 +100,72 @@ hr.intro-divider {
   text-shadow: 1px 1px 1px rgba(0,0,0, 20);
   box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
   letter-spacing: 2px;
-}
+} */
 
 /*section 2*/
-.content-section-a {
+/* .content-section-a {
     padding: 50px 0;
     background: url('https://68.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_540.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 855px;
-}
+    background-position: center;
+
+} */
 .bg-overlay2 {
-  margin-top: -50px;
-  background: rgba(255, 255, 255, 0.2);
-  height: 855px;
+  margin-top: -10px;
+  /* background: rgba(230, 6, 6, 0.2); */
+  height: 300px;
 }
-  /*self-taught*/
-.container .link {
-  color: rgb(255, 255, 255);
+/*self-taught*/
+/* .container .link {
+  color: rgb(252, 6, 6);
   font-weight: bold;
   font-size: 22px;
 }
 .container .link-footer {
-  color: rgb(0, 0, 0);
+  color: rgb(250, 17, 161);
   font-weight: bold;
   font-size: 32px;
 }
 .container .link-footer:hover {
-  color:rgba(24,39,40, 0.8);
+  color:rgba(81, 255, 0, 0.8);
   font-weight: bold;
   font-size: 32px;
 }
 
 .container .link:hover {
-  color: rgb(0,0,128);
+  color: rgb(236, 236, 11);
   font-weight: bold;
   font-size: 22.5px;
-}
+} */
 
 h2.section-heading {
-    margin-top: 100px;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 0.9);
+  margin-top: 100px;
+  font-size: 3em;
+  color: #FF4500; /*se queda*/
 }
 
-  /*text*/
- .content-section-a p {
-    font-size: 22px;
-   font-weight: bold;
-    color: #000;
-  }
-.content-section-a p a {
-  color: silver;
+/*text*/
+.content-section-a p {
+  font-size: 22px;
   font-weight: bold;
+  color: #bfbfbf;
 }
+/* .content-section-a p a {
+  color: rgb(5, 26, 255);
+  font-weight: bold;
+} */
 /*profile picture*/
-.img-circle {
-  margin-top: 150px;
-  border: 1px outset rgba(255, 255, 255, 0.3);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+/* .img-circle {
+  margin-top: 500px;
+  border: 1px outset rgba(0, 85, 255, 0.3);
+  box-shadow: 1px 1px 1px rgba(244, 4, 4, 0.6);
   
-}
-
+} */
 
 /* Portfolio section*/
-section {
-  color: black;
-  background: url('https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
 
- #below-section {
+#below-section {
   color: #000;
-}
-
-#small-text {
-  color: white;
 }
 
 /*.portfolio-item {
@@ -214,7 +184,7 @@ section {
 
 #portfolio .portfolio-item:hover {
   transition: 0.5s;
-  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -225,21 +195,25 @@ section {
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s,
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -250,19 +224,34 @@ section {
   color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  i {
   margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  h3,
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  h4 {
   margin: 0;
 }
 
 #portfolio .portfolio-item .portfolio-caption {
   max-width: 400px;
   margin: 0 auto;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 25px;
 }
@@ -284,19 +273,17 @@ section {
   z-index: 2;
 }
 
-@media (min-width:767px) {
+@media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
 }
 
-
 .section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
 }
-
 
 .footer {
   background-color: #84a5c8;
@@ -320,7 +307,7 @@ section {
 }
 
 .footer-left::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -360,15 +347,14 @@ section {
   margin: 0 10px;
   cursor: pointer;
 }
- 
+
 .footer-socials a {
-  color: inherit; 
+  color: inherit;
 }
 
 .footer-socials a:hover {
-  color: inherit; 
+  color: inherit;
 }
-
 
 /* App.css */
 
@@ -410,11 +396,12 @@ section {
 }
 
 /* Estilos para la tarjeta individual */
-.card-align > * {  /* Esto selecciona los hijos directos de card-align, que serían tus componentes Tarjeta */
-  transition: transform 0.3s ease;  /* Transición suave para el efecto de zoom */
+.card-align > * {
+  /* Esto selecciona los hijos directos de card-align, que serían tus componentes Tarjeta */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
 }
 
 .card-align > *:hover {
-  transform: scale(1.05);  /* Aumenta el tamaño en un 5% al pasar el cursor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Opcional: añade una sombra para mayor efecto */
+  transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para mayor efecto */
 }
