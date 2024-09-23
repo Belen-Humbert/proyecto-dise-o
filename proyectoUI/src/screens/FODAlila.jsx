@@ -1,27 +1,74 @@
 import React from 'react';
-import '../Styles/FodaLila.css'; // Asegúrate de importar los estilos
 import { Container, Typography, Grid, Box, Paper } from '@mui/material';
+import styles from '../Styles/FodaLila.module.css'; 
+import LilaImage from '../assets/imagenes/LILA.png';
 
 const FODAlila = () => {
   return (
-    <Container className="FodaLila">
-      <Typography variant="h2" gutterBottom align="center">
+    <Container className="fodaLila-container">
+      {/* Título principal */}
+      <Typography 
+        variant="h2" 
+        className="fodaLila-title"
+        gutterBottom 
+        align="center"
+        sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+      >
         Análisis FODA
       </Typography>
 
-      <Typography variant="body1" paragraph align="center">
+      {/* Texto introductorio */}
+      <Typography 
+        variant="body1" 
+        className="fodaLila-introText"
+        align="center"
+        sx={{
+          fontFamily: 'Poppins, sans-serif',
+          color: '#666',
+          fontSize: '1.2rem',
+          lineHeight: 1.7,
+          maxWidth: '900px', 
+          margin: '0 auto', 
+          textAlign: 'center',
+          display: 'block'
+        }} // Forzamos los estilos con sx
+      >
         El análisis FODA de Lila Software Studio revela una empresa con claras fortalezas en su enfoque personalizado y su capacidad para generar productos de alta calidad. Uno de sus principales puntos fuertes es su modelo de trabajo basado en la empatía y la creatividad, lo que permite generar soluciones innovadoras y personalizadas para cada cliente. Además, la empresa se caracteriza por su cercanía con los clientes, lo que genera relaciones comerciales a largo plazo basadas en la confianza.
       </Typography>
+      <br />
+      <br />
 
-      <Grid container spacing={4} className="FodaLila-section">
-        {/* Sección Fortalezas */}
+      {/* Sección FODA */}
+      <Grid container spacing={4} className="fodaLila-section">
+        {/* Fortalezas */}
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
+          <Paper 
+            elevation={3} 
+            className="fodaLila-paper"
+            sx={{
+              transition: 'box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
+              padding: '20px',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                transform: 'translateY(-10px)', 
+              }
+            }}
+          >
             <Box>
-              <Typography variant="h4" className="FodaLila-subtitle" gutterBottom>
+              <Typography 
+                variant="h4" 
+                className="fodaLila-subtitle"
+                gutterBottom
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+              >
                 Fortalezas
               </Typography>
-              <Typography variant="body1" className="FodaLila-text">
+              <Typography className="fodaLila-text">
                 - Enfoque personalizado y soluciones innovadoras.
                 <br />
                 - Cercanía con los clientes, generando relaciones a largo plazo.
@@ -32,14 +79,36 @@ const FODAlila = () => {
           </Paper>
         </Grid>
 
-        {/* Sección Debilidades */}
+        {/* Repite lo mismo para las otras tarjetas */}
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
+          <Paper 
+            elevation={3} 
+            className="fodaLila-paper"
+            sx={{
+              transition: 'box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
+              padding: '20px',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                transform: 'translateY(-10px)', 
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)' 
+              }
+            }}
+          >
             <Box>
-              <Typography variant="h4" className="FodaLila-subtitle" gutterBottom>
+              <Typography 
+                variant="h4" 
+                className="fodaLila-subtitle"
+                gutterBottom
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+              >
                 Debilidades
               </Typography>
-              <Typography variant="body1" className="FodaLila-text">
+              <Typography className="fodaLila-text">
                 - Dependencia de plataformas externas como Notion y Figma.
                 <br />
                 - Enfoque en contratar talento local, lo que limita la capacidad de expansión.
@@ -48,14 +117,36 @@ const FODAlila = () => {
           </Paper>
         </Grid>
 
-        {/* Sección Oportunidades */}
+        {/* Oportunidades */}
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
+          <Paper 
+            elevation={3} 
+            className="fodaLila-paper"
+            sx={{
+              transition: 'box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
+              padding: '20px',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                transform: 'translateY(-10px)', 
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)' 
+              }
+            }}
+          >
             <Box>
-              <Typography variant="h4" className="FodaLila-subtitle" gutterBottom>
+              <Typography 
+                variant="h4" 
+                className="fodaLila-subtitle"
+                gutterBottom
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+              >
                 Oportunidades
               </Typography>
-              <Typography variant="body1" className="FodaLila-text">
+              <Typography className="fodaLila-text">
                 - Creciente demanda de soluciones tecnológicas innovadoras.
                 <br />
                 - Visión de internacionalización, lo que abre nuevas puertas para expandir el mercado más allá de Argentina.
@@ -64,14 +155,36 @@ const FODAlila = () => {
           </Paper>
         </Grid>
 
-        {/* Sección Amenazas */}
+        {/* Amenazas */}
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
+          <Paper 
+            elevation={3} 
+            className="fodaLila-paper"
+            sx={{
+              transition: 'box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
+              padding: '20px',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              '&:hover': {
+                transform: 'translateY(-10px)', 
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)' 
+              }
+            }}
+          >
             <Box>
-              <Typography variant="h4" className="FodaLila-subtitle" gutterBottom>
+              <Typography 
+                variant="h4" 
+                className="fodaLila-subtitle"
+                gutterBottom
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+              >
                 Amenazas
               </Typography>
-              <Typography variant="body1" className="FodaLila-text">
+              <Typography className="fodaLila-text">
                 - Inestabilidad económica y política en Argentina.
                 <br />
                 - Adopción de plataformas low-code/no-code, lo que podría reducir la demanda de software a medida.
@@ -80,6 +193,12 @@ const FODAlila = () => {
           </Paper>
         </Grid>
       </Grid>
+
+      {/* Sección de la imagen */}
+      <Box className={styles.fodaLilaImageContainer} display="flex" justifyContent="center" marginTop="50px">
+      <img src={LilaImage} alt="Lila Software" className={styles.fodaLilaImage} /> 
+      </Box>
+
     </Container>
   );
 };
