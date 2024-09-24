@@ -4,10 +4,12 @@ import Lila from "../screens/lila";
 import FODAlila from "../screens/FODAlila";  
 import PESTlila from "../screens/PESTlila";
 import PORTERlila from "../screens/PORTERlila";
+import ScrollToTop from "./ScrollTop";
 
 function Rutas() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lila" element={<Lila />} />
