@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos del contenedor principal */
+.pestLilaContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Título principal */
+.pestLilaTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #936A9F;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+/* Para centrar el acordeón y darle un ancho máximo */
+.accordionWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos del acordeón */
+.pestLilaAccordion {
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Estilos del resumen del acordeón */
+.pestLilaAccordionSummary {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #c1a6cf;
+  color: white;
+  font-weight: 700 !important;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Estilos del contenido del acordeón */
+.pestLilaAccordionDetails {
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif !important;
+  color: #666;
+}
+
+/* Estilos para el texto */
+.pestLilaText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/*estilos para la imagen */
+.pestLilaImage {
+    width: 100%;
+    max-width: 700px; /* Aumenté el ancho máximo */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px auto; /* Centrar la imagen */
+    display: block; /* Para que respete el margin auto */
+  }
+  
+  .pestLilaImage:hover {
+    transform: scale(1.1); /* Aumenté el zoom a 1.1 */
+  }
+  
