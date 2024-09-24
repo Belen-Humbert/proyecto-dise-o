@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos del contenedor principal */
+.porterLilaContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Título principal */
+.porterLilaTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #936A9F;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+/* Contenedor para centrar los acordeones */
+.accordionWrapper {
+  max-width: 900px;
+  margin: 0 auto; /* Centra los acordeones */
+}
+
+/* Estilos para los acordeones */
+.porterLilaAccordion {
+  margin-bottom: 20px;
+  background-color: #936A9F !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Estilos del resumen de los acordeones */
+.porterLilaAccordionSummary {
+  background-color: #936A9F !important;
+  color: white !important;
+  font-weight: 700 !important;
+  justify-content: center;  /* Centrar el texto */
+}
+
+/* Estilos de los detalles */
+.porterLilaAccordionDetails {
+  background-color: #f9f9f9 !important;
+  color: #666 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-align: left !important; /* Alinear texto a la izquierda */
+  max-width: 700px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centramos el contenido */
+  padding: 20px; /* Añadimos relleno */
+  line-height: 1.7;
+}
+
+/* Estilos para el texto */
+.porterLilaText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Estilos para la imagen */
+.imageContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.porterLilaImage {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Efecto suave */
+  border-radius: 8px;
+}
+
+.porterLilaImage:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
