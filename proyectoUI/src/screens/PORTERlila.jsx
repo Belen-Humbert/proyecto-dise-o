@@ -15,16 +15,20 @@ const PORTERlila = () => {
   };
 
   return (
-    <div className={styles.porterLilaContainer}>
+    <div style={{
+      padding: '60px 20px',
+      backgroundColor: '#f4f4f4',
+      textAlign: 'center',
+    }}>
       <Typography
         variant="h2"
         sx={{
           fontFamily: 'Poppins, sans-serif !important',
           fontWeight: 700,
-          color: '#c1a6cf',  // Color del título
-          fontSize: '3rem',
-          marginBottom: '40px',
-          textAlign: 'center',
+          color: '#c1a6cf !important',  // Color del título
+          fontSize: '3rem !important',
+          marginBottom: '40px !important',
+          textAlign: 'center !important',
         }}
       >
         Análisis 5 Fuerzas de Porter
@@ -35,12 +39,12 @@ const PORTERlila = () => {
         variant="body1"
         sx={{
           fontFamily: 'Poppins, sans-serif !important',
-          fontSize: '1.2rem',
-          color: '#666',
-          maxWidth: '700px',
-          margin: '0 auto 40px auto', // Centrado y espacio inferior
-          textAlign: 'center',
-          lineHeight: 1.7,
+          fontSize: '1.2rem !important',
+          color: '#666 !important',
+          maxWidth: '700px !important',
+          margin: '0 auto 40px auto !important', // Centrado y espacio inferior
+          textAlign: 'center !important',
+          lineHeight: '1.7 !important',
         }}
       >
         El análisis de las 5 Fuerzas de Porter examina la competitividad de Lila Software Studio dentro de su industria,
@@ -48,43 +52,45 @@ const PORTERlila = () => {
         sustitutos, y la rivalidad entre competidores.
       </Typography>
 
-      <div className={styles.accordionWrapper}>
+      <div style={{
+        maxWidth: '900px',
+        margin: '0 auto',
+      }}>
         {/* Acordeón: Poder de Negociación de los Proveedores */}
         <Accordion
           expanded={expanded === 'panel1'}
           onChange={handleChange('panel1')}
           sx={{
-            marginBottom: '20px',
-            borderRadius: '8px',
-            backgroundColor: expanded === 'panel1' ? '#ffffff' : '#c1a6cf',  // Cambiar el fondo del acordeón
+            marginBottom: '20px !important',
+            borderRadius: '8px !important',
+            backgroundColor: '#ffffff !important',  // Fondo blanco siempre cuando se expande
+            boxShadow: 'none !important', // Eliminar sombras
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel1' ? '#c1a6cf' : 'white' }} />}
-            sx={{
-              backgroundColor: '#c1a6cf',  // Cambiar el fondo del acordeón cerrado
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 700,
-              justifyContent: 'center',
-            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel1' ? '#c1a6cf !important' : 'white !important' }} />}
+            className={styles.porterLilaAccordionSummary}  // Usamos la clase de CSS module
           >
             <Typography
               variant="h5"
-              sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+              sx={{
+                fontFamily: 'Poppins, sans-serif !important',
+                fontWeight: 700,
+                color: 'white !important',  // Aseguramos el texto en blanco
+              }}
             >
               Poder de Negociación de los Proveedores
             </Typography>
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: '#ffffff', // Fondo blanco cuando se abre
-              color: '#666',
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '20px',
-              textAlign: 'center',
-              lineHeight: 1.7,
+              backgroundColor: '#ffffff !important', // Fondo blanco siempre cuando se expande
+              color: '#666 !important',
+              maxWidth: '700px !important',
+              margin: '0 auto !important',
+              padding: '20px !important',
+              textAlign: 'left !important',
+              lineHeight: '1.7 !important',
               fontFamily: 'Poppins, sans-serif !important',
             }}
           >
@@ -92,9 +98,9 @@ const PORTERlila = () => {
               variant="body1"
               sx={{
                 fontFamily: 'Poppins, sans-serif !important',
-                fontSize: '1.2rem',
-                color: '#666',
-                lineHeight: 1.7,
+                fontSize: '1.2rem !important',
+                color: '#666 !important',
+                lineHeight: '1.7 !important',
               }}
             >
               Lila depende de una serie de proveedores de herramientas tecnológicas esenciales para su operación diaria, 
@@ -115,37 +121,36 @@ const PORTERlila = () => {
           expanded={expanded === 'panel2'}
           onChange={handleChange('panel2')}
           sx={{
-            marginBottom: '20px',
-            borderRadius: '8px',
-            backgroundColor: expanded === 'panel2' ? '#ffffff' : '#c1a6cf',
+            marginBottom: '20px !important',
+            borderRadius: '8px !important',
+            backgroundColor: '#ffffff !important',  // Fondo blanco siempre cuando se expande
+            boxShadow: 'none !important',
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel2' ? '#c1a6cf' : 'white' }} />}
-            sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 700,
-              justifyContent: 'center',
-            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel2' ? '#c1a6cf !important' : 'white !important' }} />}
+            className={styles.porterLilaAccordionSummary}  // Usamos la clase de CSS module
           >
             <Typography
               variant="h5"
-              sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+              sx={{
+                fontFamily: 'Poppins, sans-serif !important',
+                fontWeight: 700,
+                color: 'white !important',  // Aseguramos el texto en blanco
+              }}
             >
               Poder de Negociación de los Clientes
             </Typography>
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: '#ffffff', // Fondo blanco cuando se abre
-              color: '#666',
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '20px',
-              textAlign: 'center',
-              lineHeight: 1.7,
+              backgroundColor: '#ffffff !important',
+              color: '#666 !important',
+              maxWidth: '700px !important',
+              margin: '0 auto !important',
+              padding: '20px !important',
+              textAlign: 'left !important',
+              lineHeight: '1.7 !important',
               fontFamily: 'Poppins, sans-serif !important',
             }}
           >
@@ -153,9 +158,9 @@ const PORTERlila = () => {
               variant="body1"
               sx={{
                 fontFamily: 'Poppins, sans-serif !important',
-                fontSize: '1.2rem',
-                color: '#666',
-                lineHeight: 1.7,
+                fontSize: '1.2rem !important',
+                color: '#666 !important',
+                lineHeight: '1.7 !important',
               }}
             >
               Lila tiene la ventaja de trabajar con clientes que valoran la calidad y la personalización de sus productos, 
@@ -173,37 +178,36 @@ const PORTERlila = () => {
           expanded={expanded === 'panel3'}
           onChange={handleChange('panel3')}
           sx={{
-            marginBottom: '20px',
-            borderRadius: '8px',
-            backgroundColor: expanded === 'panel3' ? '#ffffff' : '#c1a6cf',
+            marginBottom: '20px !important',
+            borderRadius: '8px !important',
+            backgroundColor: '#ffffff !important',  // Fondo blanco siempre cuando se expande
+            boxShadow: 'none !important',
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel3' ? '#c1a6cf' : 'white' }} />}
-            sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 700,
-              justifyContent: 'center',
-            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel3' ? '#c1a6cf !important' : 'white !important' }} />}
+            className={styles.porterLilaAccordionSummary}  // Usamos la clase de CSS module
           >
             <Typography
               variant="h5"
-              sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+              sx={{
+                fontFamily: 'Poppins, sans-serif !important',
+                fontWeight: 700,
+                color: 'white !important',  // Aseguramos el texto en blanco
+              }}
             >
               Amenaza de Nuevos Competidores
             </Typography>
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: '#ffffff', // Fondo blanco cuando se abre
-              color: '#666',
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '20px',
-              textAlign: 'center',
-              lineHeight: 1.7,
+              backgroundColor: '#ffffff !important', // Fondo blanco siempre cuando se expande
+              color: '#666 !important',
+              maxWidth: '700px !important',
+              margin: '0 auto !important',
+              padding: '20px !important',
+              textAlign: 'left !important',
+              lineHeight: '1.7 !important',
               fontFamily: 'Poppins, sans-serif !important',
             }}
           >
@@ -211,9 +215,9 @@ const PORTERlila = () => {
               variant="body1"
               sx={{
                 fontFamily: 'Poppins, sans-serif !important',
-                fontSize: '1.2rem',
-                color: '#666',
-                lineHeight: 1.7,
+                fontSize: '1.2rem !important',
+                color: '#666 !important',
+                lineHeight: '1.7 !important',
               }}
             >
               Aunque Lila está bien posicionada en Mendoza, la barrera de entrada en la industria del software es relativamente 
@@ -230,37 +234,36 @@ const PORTERlila = () => {
           expanded={expanded === 'panel4'}
           onChange={handleChange('panel4')}
           sx={{
-            marginBottom: '20px',
-            borderRadius: '8px',
-            backgroundColor: expanded === 'panel4' ? '#ffffff' : '#c1a6cf',
+            marginBottom: '20px !important',
+            borderRadius: '8px !important',
+            backgroundColor: '#ffffff !important',  // Fondo blanco siempre cuando se expande
+            boxShadow: 'none !important',
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel4' ? '#c1a6cf' : 'white' }} />}
-            sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 700,
-              justifyContent: 'center',
-            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel4' ? '#c1a6cf !important' : 'white !important' }} />}
+            className={styles.porterLilaAccordionSummary}  // Usamos la clase de CSS module
           >
             <Typography
               variant="h5"
-              sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+              sx={{
+                fontFamily: 'Poppins, sans-serif !important',
+                fontWeight: 700,
+                color: 'white !important',  // Aseguramos el texto en blanco
+              }}
             >
               Amenaza de Productos Sustitutos
             </Typography>
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: '#ffffff', // Fondo blanco cuando se abre
-              color: '#666',
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '20px',
-              textAlign: 'center',
-              lineHeight: 1.7,
+              backgroundColor: '#ffffff !important', // Fondo blanco siempre cuando se expande
+              color: '#666 !important',
+              maxWidth: '700px !important',
+              margin: '0 auto !important',
+              padding: '20px !important',
+              textAlign: 'left !important',
+              lineHeight: '1.7 !important',
               fontFamily: 'Poppins, sans-serif !important',
             }}
           >
@@ -268,9 +271,9 @@ const PORTERlila = () => {
               variant="body1"
               sx={{
                 fontFamily: 'Poppins, sans-serif !important',
-                fontSize: '1.2rem',
-                color: '#666',
-                lineHeight: 1.7,
+                fontSize: '1.2rem !important',
+                color: '#666 !important',
+                lineHeight: '1.7 !important',
               }}
             >
               Las soluciones low-code y no-code representan una amenaza significativa para las empresas que desarrollan software 
@@ -288,37 +291,36 @@ const PORTERlila = () => {
           expanded={expanded === 'panel5'}
           onChange={handleChange('panel5')}
           sx={{
-            marginBottom: '20px',
-            borderRadius: '8px',
-            backgroundColor: expanded === 'panel5' ? '#ffffff' : '#c1a6cf',
+            marginBottom: '20px !important',
+            borderRadius: '8px !important',
+            backgroundColor: '#ffffff !important',  // Fondo blanco siempre cuando se expande
+            boxShadow: 'none !important',
           }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel5' ? '#c1a6cf' : 'white' }} />}
-            sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: 700,
-              justifyContent: 'center',
-            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: expanded === 'panel5' ? '#c1a6cf !important' : 'white !important' }} />}
+            className={styles.porterLilaAccordionSummary}  // Usamos la clase de CSS module
           >
             <Typography
               variant="h5"
-              sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+              sx={{
+                fontFamily: 'Poppins, sans-serif !important',
+                fontWeight: 700,
+                color: 'white !important',  // Aseguramos el texto en blanco
+              }}
             >
               Rivalidad entre Competidores
             </Typography>
           </AccordionSummary>
           <AccordionDetails
             sx={{
-              backgroundColor: '#ffffff', // Fondo blanco cuando se abre
-              color: '#666',
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '20px',
-              textAlign: 'center',
-              lineHeight: 1.7,
+              backgroundColor: '#ffffff !important', // Fondo blanco siempre cuando se expande
+              color: '#666 !important',
+              maxWidth: '700px !important',
+              margin: '0 auto !important',
+              padding: '20px !important',
+              textAlign: 'left !important',
+              lineHeight: '1.7 !important',
               fontFamily: 'Poppins, sans-serif !important',
             }}
           >
@@ -326,9 +328,9 @@ const PORTERlila = () => {
               variant="body1"
               sx={{
                 fontFamily: 'Poppins, sans-serif !important',
-                fontSize: '1.2rem',
-                color: '#666',
-                lineHeight: 1.7,
+                fontSize: '1.2rem !important',
+                color: '#666 !important',
+                lineHeight: '1.7 !important',
               }}
             >
               En Mendoza, Lila se encuentra en un entorno con pocos competidores directos que ofrezcan el mismo nivel de personalización. 
@@ -344,11 +346,15 @@ const PORTERlila = () => {
       </div>
 
       {/* Imagen */}
-      <div className={styles.imageContainer}>
+      <div style={{
+        marginTop: '40px',
+        display: 'flex',
+        justifyContent: 'center',
+      }}>
         <img
           src={PORTERlilaImage}
           alt="Análisis 5 Fuerzas de Porter"
-          className={styles.porterLilaImage}
+          className={styles.porterLilaImage}  // Aquí se usa la clase del CSS module
         />
       </div>
     </div>
