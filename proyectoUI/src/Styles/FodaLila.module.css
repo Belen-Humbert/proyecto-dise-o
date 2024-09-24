@@ -75,14 +75,17 @@
 /* Imagen */
 .fodaLilaImageContainer {
   margin-top: 50px;
+  display: flex;  /* Usamos flexbox para centrar */
+  justify-content: center;  /* Centramos la imagen horizontalmente */
 }
 
 .fodaLilaImage {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out; 
+  max-width: 800px;  /* Limita el ancho máximo de la imagen */
+  width: 100%;  /* Asegura que ocupe el 100% del ancho disponible */
+  height: auto;  /* Mantiene las proporciones de la imagen */
+  transition: transform 0.3s ease-in-out;  /* Efecto suave al hacer hover */
 }
 
 .fodaLilaImage:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);  /* Aumenta el tamaño de la imagen al pasar el cursor */
 }

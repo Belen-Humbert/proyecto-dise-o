@@ -212,7 +212,7 @@ p {
 }
 
 .img-container:hover .zoomable-image {
-    transform: scale(2.5);
+    transform: scale(2.0);
     z-index: 2;
 }
 

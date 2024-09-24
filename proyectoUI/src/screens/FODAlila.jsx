@@ -12,7 +12,7 @@ const FODAlila = () => {
         className="fodaLila-title"
         gutterBottom 
         align="center"
-        sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+        sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
       >
         Análisis FODA
       </Typography>
@@ -64,7 +64,7 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
               >
                 Fortalezas
               </Typography>
@@ -104,7 +104,7 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
               >
                 Debilidades
               </Typography>
@@ -142,7 +142,7 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
               >
                 Oportunidades
               </Typography>
@@ -180,7 +180,7 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#936A9F', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
               >
                 Amenazas
               </Typography>

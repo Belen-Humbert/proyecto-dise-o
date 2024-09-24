@@ -15,7 +15,7 @@ const PESTlila = () => {
         sx={{
           fontFamily: 'Poppins, sans-serif',
           fontWeight: 700,
-          color: '#936A9F',
+          color: '#c1a6cf',
           fontSize: '3rem',
           marginBottom: '40px',
           textAlign: 'center'
@@ -30,20 +30,20 @@ const PESTlila = () => {
           sx={{
             marginBottom: '20px',
             borderRadius: '8px',
-            backgroundColor: '#c1a6cf',
+            backgroundColor: '#c1a6cf',  // Fondo del acordeón cerrado
           }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
+              backgroundColor: '#c1a6cf',  // Color de fondo
+              color: 'white',  // Texto del título en blanco
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 700,
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
+            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'white' }}>
               Estructura Económica
             </Typography>
           </AccordionSummary>
@@ -73,20 +73,20 @@ const PESTlila = () => {
           sx={{
             marginBottom: '20px',
             borderRadius: '8px',
-            backgroundColor: '#c1a6cf',
+            backgroundColor: '#c1a6cf',  // Fondo del acordeón cerrado
           }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
+              backgroundColor: '#c1a6cf',  // Color de fondo
+              color: 'white',  // Texto del título en blanco
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 700,
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
+            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'white' }}>
               Estructura Tecnológica
             </Typography>
           </AccordionSummary>
@@ -112,20 +112,20 @@ const PESTlila = () => {
           sx={{
             marginBottom: '20px',
             borderRadius: '8px',
-            backgroundColor: '#c1a6cf',
+            backgroundColor: '#c1a6cf',  // Fondo del acordeón cerrado
           }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
+              backgroundColor: '#c1a6cf',  // Color de fondo
+              color: 'white',  // Texto del título en blanco
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 700,
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
+            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'white' }}>
               Estructura Política
             </Typography>
           </AccordionSummary>
@@ -151,20 +151,20 @@ const PESTlila = () => {
           sx={{
             marginBottom: '20px',
             borderRadius: '8px',
-            backgroundColor: '#c1a6cf',
+            backgroundColor: '#c1a6cf',  // Fondo del acordeón cerrado
           }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             sx={{
-              backgroundColor: '#c1a6cf',
-              color: 'white',
+              backgroundColor: '#c1a6cf',  // Color de fondo
+              color: 'white',  // Texto del título en blanco
               fontFamily: 'Poppins, sans-serif',
               fontWeight: 700,
               justifyContent: 'center',
             }}
           >
-            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
+            <Typography variant="h5" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'white' }}>
               Estructura Social
             </Typography>
           </AccordionSummary>
