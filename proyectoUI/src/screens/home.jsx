@@ -88,7 +88,7 @@ function Home() {
                 }}
               />
             </Link>
-            <Link to="/lila">
+            <Link to="/ies">
               <Tarjeta
                 empresa={{
                   name: "lila software studio",
