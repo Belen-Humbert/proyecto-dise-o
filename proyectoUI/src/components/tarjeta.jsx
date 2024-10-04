@@ -12,7 +12,7 @@ export default function Tarjeta({empresa}) {
         <CardMedia
          component="img"
           height="180"
-          image="/descargar (3).jpg"
+          image="/imagen1.webp"
           alt={empresa.name}
         />
         <CardContent>

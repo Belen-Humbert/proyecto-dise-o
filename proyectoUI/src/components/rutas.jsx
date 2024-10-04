@@ -6,10 +6,12 @@ import PESTlila from "../screens/PESTlila";
 import PORTERlila from "../screens/PORTERlila";
 import Ies from "../screens/ies";
 import FODAies from "../screens/FODAies"; 
+import ScrollToTop from "./ScrollTop";
 
 function Rutas() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lila" element={<Lila />} />

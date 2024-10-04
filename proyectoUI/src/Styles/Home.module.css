@@ -1,0 +1,226 @@
+/* Asegurar que el fondo cubra todo y no haya margen o relleno */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total del elemento */
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1d; /* O puedes usar #2B2B2B */
+}
+
+
+.introMessage {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+/*Big header*/
+.introMessage > h1 {
+  text-align: center;
+  margin-top: -50px;
+  text-shadow: 2px 1px 2px #fa7f05;
+  font-size: 5em;
+  color:#ff4500;
+}
+
+/*small header*/
+.introMessage > h3 {
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(200, 199, 199);
+  color:#CCCCCC;
+}
+
+@media (max-width: 767px) {
+  .introMessage {
+    padding-bottom: 15%;
+  }
+
+  .introMessage > h1 {
+    font-size: 3em;
+  }
+
+  .introDivider {
+    width: 100%;
+  }
+}
+
+/*section 2*/
+.contentSectionA {
+  font-size: 22px;
+  font-weight: bold;
+  color: #bfbfbf;
+}
+
+.lead {
+  text-align: left;
+}
+
+.bgOverlay2 {
+  margin-top: -10px;
+  height: 300px;
+}
+
+.sectionHeading {
+  margin-top: 100px;
+  font-size: 3em;
+  color: #ff4500; /*se queda*/
+}
+
+/* Portfolio section*/
+#belowSection {
+  color: #000;
+}
+
+.sectionHeadingSpacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+.footer {
+  background-color: #84a5c8;
+  color: white;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footerLeft {
+  position: relative;
+  padding-right: 20px;
+}
+
+.footerLeft::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: white; /* Color de la línea */
+}
+
+.footerCenter {
+  text-align: center;
+}
+
+.footerMenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.footerMenu li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.footerRight {
+  text-align: right;
+}
+
+.footerSocials {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.footerSocials li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.footerSocials a {
+  color: inherit;
+}
+
+.footerSocials a:hover {
+  color: inherit;
+}
+
+/* App.css */
+
+/* Navigation */
+.navbar {
+  background-color: #ff4400d2;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px #1d1d1d;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.navbarMenu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarItem {
+  position: relative;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.navbarLink:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active .navbarLink {
+  color: #ed9907;
+}
+
+.badge {
+  background-color: #000;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+
+}
+
+.cardAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos para la tarjeta individual */
+.cardAlign > * {
+  /* Esto selecciona los hijos directos de cardAlign, que serían tus componentes Tarjeta */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+}
+
+.cardAlign > *:hover {
+  transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para mayor efecto */
+}
