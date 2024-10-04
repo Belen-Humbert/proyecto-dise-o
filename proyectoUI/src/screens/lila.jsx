@@ -173,7 +173,7 @@ const Lila = () => {
     {/* Tarjeta Análisis FODA */}
     <Grid item xs={12} sm={4}>
       <Card 
-        onClick={() => navigate("/foda")} 
+        onClick={() => navigate("/fodaLila")} 
         sx={{ 
           cursor: "pointer", 
           transition: "transform 0.3s ease-in-out", 

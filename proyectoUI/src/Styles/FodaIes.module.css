@@ -1,0 +1,40 @@
+.fodaIes-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .fodaIes-title {
+    color: #0073E6;
+    text-align: center;
+  }
+  
+  .fodaIes-paper {
+    border-radius: 8px;
+    background-color: #f4f4f4;
+  }
+  
+  .fodaIes-text {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .fodaIes-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .fodaIesImageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fodaIesImage {
+    max-width: 700px; /* Tamaño máximo más pequeño */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+  }
+  
+  .fodaIesImage:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% al pasar el cursor */
+  }
+  

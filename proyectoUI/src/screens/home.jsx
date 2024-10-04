@@ -91,15 +91,15 @@ function Home() {
           <Link to="/lila">
             <Tarjeta
               empresa={{
-                name: "lila software studio",
+                name: "Lila software studio",
                 descript: "odokdkkdkkdkd",
               }}
             />
           </Link>
-          <Link to="/lila">
+          <Link to="/Ies">
             <Tarjeta
               empresa={{
-                name: "lila software studio",
+                name: "Ies 9-024",
                 descript: "odokdkkdkkdkd",
               }}
             />
