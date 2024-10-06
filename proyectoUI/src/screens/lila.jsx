@@ -12,7 +12,7 @@ import Grid from '@mui/material/Grid';
 import organigramaLila from '../assets/imagenes/organigramaLila.png';
 import techLila from '../assets/imagenes/techLila.png';
 import logoLila from '../assets/imagenes/logoLila.png';
-import '../Styles/Lila.css';
+import '../Styles/Lila.module.css';
 
 const Lila = () => {
   const navigate = useNavigate(); 

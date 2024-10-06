@@ -53,9 +53,9 @@ function Home() {
 
         {/* Page Content */}
         <div id="about" className={styles.contentSectionA}>
-          <div className={styles.bgOverlay2}>
+          <div>
             <div>
-              <h2 className={styles.sectionHeading}>AuditaWeb Solutions</h2>
+              <h2 className={styles.sectionHeading}>Sobre Nosotros</h2>
               <br />
               <p className={styles.lead}>
                 En AuditaWeb Solutions, somos especialistas en brindar
@@ -74,10 +74,10 @@ function Home() {
         </div>
 
         {/* Portfolio Grid Section */}
-        <section>
+        <section className={styles.contentSectionA}> 
+         
           <div>
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
-            <h3>Últimas auditorías realizadas</h3>
           </div>
           <div className={styles.cardAlign}>
             <Link to="/lila">
@@ -91,7 +91,7 @@ function Home() {
             <Link to="/ies">
               <Tarjeta
                 empresa={{
-                  name: "lila software studio",
+                  name: "Instituto de Educación Superior N°9-024 de Lavalle",
                   descript: "odokdkkdkkdkd",
                 }}
               />
@@ -108,7 +108,7 @@ function Home() {
         </section>
 
         {/* Team Section */}
-        <div id="team" className={styles.teamSection}>
+        <div id="team" className={styles.contentSectionA}>
           <div>
             <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
             <h3 className={styles.sectionSubheading}>
