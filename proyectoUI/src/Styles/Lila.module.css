@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Títulos generales */
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #c1a6cf; /* El color morado claro */
+}
+
+/* Párrafos */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Estilos específicos para cada sección de la página Lila */
+.HomeLila {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ajustes del logo en HomeLila */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.logo-lila {
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-lila:hover {
+    transform: scale(1.1);
+}
+
+/* Frases debajo del logo */
+.frases-container {
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frase {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.frase:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.frase:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.frase:nth-child(3) {
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #936A9F;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #E73F83;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-link:hover {
+    background-color: #F2A15F;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-link {
+        font-size: 16px;
+    }
+}
+
+/* Contenedor de los acordeones */
+.accordion-wrapper {
+    max-width: 900px; /* Ancho máximo del contenedor */
+    margin: 0 auto;   /* Centrado */
+    padding: 20px;
+}
+
+/* Estilos de los acordeones */
+.MuiAccordion-root {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #c1a6cf !important;
+}
+
+.MuiAccordionSummary-root {
+    background-color: #c1a6cf;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.MuiAccordionSummary-root .MuiTypography-root {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.MuiAccordionDetails-root {
+    background-color: #ffffff;
+    color: #666;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
+}
+
+/* Estilos del organigrama */
+.OrganigramaLila {
+    text-align: center;
+    padding: 40px;
+}
+
+.img-row {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
+}
+
+.img-container {
+    width: 350px;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+    border: 2px solid #936A9F;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    transition: z-index 0.3s ease-in-out;
+}
+
+.zoomable-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.img-container:hover {
+    z-index: 10;
+    margin-right: 20px;
+}
+
+.img-container:hover .zoomable-image {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .img-row {
+        flex-direction: column;
+    }
+}
+
+/* Sección Análisis */
+.AnalisisLila {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.AnalisisLila h2 {
+    font-size: 2.5rem;
+    color: #936A9F;
+    margin-bottom: 30px;
+}
+
+.AnalisisLila p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.MuiCard-root {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MuiCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.MuiCardContent-root {
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.MuiTypography-h5 {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .MuiCard-root {
+        margin-bottom: 20px;
+    }
+}
+
+/* Títulos de las secciones centrados */
+.lila-title {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #c1a6cf; /* Color morado */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Zoom en las tarjetas */
+.zoomable-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .zoomable-card:hover {
+    transform: scale(1.05); /* Ligero zoom al hacer hover */
+  }
+  
