@@ -36,7 +36,7 @@ p {
 }
 
 /* Ajustes del logo en HomeLila */
-.logo-container {
+.logoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,18 +44,18 @@ p {
     margin-bottom: 20px;
 }
 
-.logo-lila {
+.logoLila {
     max-width: 300px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
-.logo-lila:hover {
+.logoLila:hover {
     transform: scale(1.1);
 }
 
 /* Frases debajo del logo */
-.frases-container {
+.frasesContainer {
     text-align: center;
     color: #333;
     display: flex;
@@ -94,7 +94,7 @@ p {
 }
 
 /* Estilos de la barra de navegación */
-.navbar {
+/* .navbar {
     background-color: #936A9F;
     padding: 15px;
     display: flex;
@@ -102,7 +102,7 @@ p {
     border-bottom: 3px solid #E73F83;
 }
 
-.navbar-list {
+.navbarList {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -125,7 +125,7 @@ p {
 }
 
 /* Ajustes responsivos */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .navbar-list {
         flex-direction: column;
         align-items: center;
@@ -133,10 +133,10 @@ p {
     .navbar-link {
         font-size: 16px;
     }
-}
+} */
 
 /* Contenedor de los acordeones */
-.accordion-wrapper {
+.accordionWrapper {
     max-width: 900px; /* Ancho máximo del contenedor */
     margin: 0 auto;   /* Centrado */
     padding: 20px;
@@ -177,7 +177,7 @@ p {
     padding: 40px;
 }
 
-.img-row {
+.imgRow {
     display: flex;
     justify-content: center;
     gap: 0;
@@ -185,7 +185,7 @@ p {
     position: relative;
 }
 
-.img-container {
+.imgContainer {
     width: 350px;
     height: auto;
     margin: 0;
@@ -197,7 +197,7 @@ p {
     transition: z-index 0.3s ease-in-out;
 }
 
-.zoomable-image {
+.zoomableImage {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -206,18 +206,18 @@ p {
     z-index: 1;
 }
 
-.img-container:hover {
+.imgContainer:hover {
     z-index: 10;
     margin-right: 20px;
 }
 
-.img-container:hover .zoomable-image {
+.imgContainer:hover .zoomableImage {
     transform: scale(1.5);
     z-index: 2;
 }
 
 @media (max-width: 768px) {
-    .img-row {
+    .imgRow {
         flex-direction: column;
     }
 }
@@ -229,7 +229,7 @@ p {
     text-align: center;
 }
 
-.AnalisisLila h2 {
+.AnalisisLila{
     font-size: 2.5rem;
     color: #936A9F;
     margin-bottom: 30px;
@@ -266,10 +266,10 @@ p {
     .MuiCard-root {
         margin-bottom: 20px;
     }
-}
+} 
 
 /* Títulos de las secciones centrados */
-.lila-title {
+.lilaTitle {
     font-size: 2.5rem;
     font-family: 'Poppins', sans-serif;
     color: #c1a6cf; /* Color morado */
@@ -278,11 +278,11 @@ p {
 }
 
 /* Zoom en las tarjetas */
-.zoomable-card {
+.zoomableCard {
     transition: transform 0.3s ease-in-out;
   }
   
-  .zoomable-card:hover {
+  .zoomableCard:hover {
     transform: scale(1.05); /* Ligero zoom al hacer hover */
   }
   

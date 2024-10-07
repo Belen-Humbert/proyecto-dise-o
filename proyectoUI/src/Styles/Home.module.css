@@ -30,22 +30,10 @@
 /*small header*/
 .introMessage > h3 {
   text-align: center;
-  color: #e76a3e;
+  color: #ed7226;
 }
 
-@media (max-width: 767px) {
-  .introMessage {
-    padding-bottom: 15%;
-  }
 
-  .introMessage > h1 {
-    font-size: 3em;
-  }
-
-  .introDivider {
-    width: 100%;
-  }
-}
 
 /*section 2*/
 .contentSectionA {
@@ -55,7 +43,7 @@
   padding: 40px; /* Más espaciado interno para darle aire */
   border-radius: 20px; /* Bordes suavemente redondeados */
   max-width: 900px; /* Tamaño máximo para la tarjeta */
-  margin: 50px 50px 300px 180px; /* Centrando la tarjeta */
+  margin: 50px 180px 300px 180px; /* Centrando la tarjeta */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
               0 30px 60px rgba(0, 0, 0, 0.8);
   position: relative; /* Para poder ajustar el contenido internamente */
@@ -64,7 +52,7 @@
 
 .lead {
   text-align: left;
-  color: #aaaba6;
+  color: #aba7a6;
 }
 
 .sectionHeading {
@@ -86,10 +74,12 @@
 /* footer */
 
 .footer {
-  background-color: #84a5c8;
-  color: white;
+  background-color: #f45027;
+  color: #141517;
   padding: 20px 0;
   font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .footerContainer {
@@ -106,6 +96,11 @@
   padding-right: 20px;
 }
 
+.footerLeft > h2{
+color: #141517;  
+
+}
+
 .footerLeft::after {
   content: "";
   position: absolute;
@@ -113,12 +108,18 @@
   right: 0;
   height: 100%;
   width: 1px;
-  background-color: white; /* Color de la línea */
+  background-color: #141517; /* Color de la línea */
 }
 
 .footerCenter {
   text-align: center;
 }
+.footerCenter > p{
+
+  color: #141517;
+
+}
+
 
 .footerMenu {
   display: flex;

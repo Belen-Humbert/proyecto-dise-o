@@ -12,33 +12,33 @@ import Grid from '@mui/material/Grid';
 import organigramaLila from '../assets/imagenes/organigramaLila.png';
 import techLila from '../assets/imagenes/techLila.png';
 import logoLila from '../assets/imagenes/logoLila.png';
-import '../Styles/Lila.module.css';
+import estilos from '../Styles/Lila.module.css';
 
 const Lila = () => {
   const navigate = useNavigate(); 
 
   return (
     <>
-      <Nav />
-      <div className="HomeLila" id="home">
-        <h2 className="lila-title">Conocenos</h2>
-        <div className="logo-container">
-          <img src={logoLila} alt="Logo Lila" className="logo-lila" />
+      <Nav /> 
+      <div className={estilos.HomeLila} id="home">
+        <h2 className={estilos.lilaTitle}>Conocenos</h2>
+        <div className={estilos.logoContainer}>
+          <img src={logoLila} alt="Logo Lila" className={estilos.logoLila} />
         </div>
 
-        <div className="frases-container">
-          <p className="frase">Enamorados de construir aplicaciones para el futuro de tu negocio</p>
-          <p className="frase">Obsesionados con diseñar experiencias únicas para nuestros clientes</p>
-          <p className="frase">Emocionados de crear productos para alcanzar tus objetivos</p>
+        <div className={estilos.frasesContainer}>
+          <p className={estilos.frase}>Enamorados de construir aplicaciones para el futuro de tu negocio</p>
+          <p className={estilos.frase}>Obsesionados con diseñar experiencias únicas para nuestros clientes</p>
+          <p className={estilos.frase}>Emocionados de crear productos para alcanzar tus objetivos</p>
         </div>
       </div>
 
-      <div className="AboutLila" id="about">
-        <div className="accordion-wrapper">
-          <h2 className="lila-title">Sobre La Empresa</h2>
+      <div className={estilos.AboutLila} id="about">
+        <div className={estilos.accordionWrapper}>
+          <h2 className={estilos.lilaTitle}>Sobre La Empresa</h2>
 
           {/* Accordion para Descripción de la Empresa */}
-          <Accordion className="lila-accordion">
+          <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography 
                 variant="h5" 
@@ -66,7 +66,7 @@ const Lila = () => {
           </Accordion>
 
           {/* Accordion para Misión y Visión */}
-          <Accordion className="lila-accordion">
+          <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography 
                 variant="h5" 
@@ -94,7 +94,7 @@ const Lila = () => {
           </Accordion>
 
           {/* Accordion para Objetivos Generales */}
-          <Accordion className="lila-accordion">
+          <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography 
                 variant="h5" 
@@ -122,7 +122,7 @@ const Lila = () => {
           </Accordion>
 
           {/* Accordion para el Core del Negocio */}
-          <Accordion className="lila-accordion">
+          <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography 
                 variant="h5" 
@@ -152,21 +152,21 @@ const Lila = () => {
       </div>
 
       {/* Sección del organigrama con las dos imágenes alineadas horizontalmente */}
-      <div className="OrganigramaLila" id="organigrama">
-        <h2 className="lila-title">Organigrama</h2>
-        <div className="img-row">
-          <div className="img-container">
-            <img src={organigramaLila} alt="Organigrama" className="zoomable-image" />
+      <div className={estilos.OrganigramaLila} id="organigrama">
+        <h2 className={estilos.lilaTitle}>Organigrama</h2>
+        <div className={estilos.imgRow}>
+          <div className={estilos.imgContainer}>
+            <img src={organigramaLila} alt="Organigrama" className={estilos.zoomableImage} />
           </div>
-          <div className="img-container">
-            <img src={techLila} alt="Tech Lila" className="zoomable-image" />
+          <div className={estilos.imgContainer}>
+            <img src={techLila} alt="Tech Lila" className={estilos.zoomableImage} />
           </div>
         </div>
       </div>
 
                 {/* Sección Análisis */}
-<div className="AnalisisLila" id="analisis">
-  <h2 className="lila-title">Análisis</h2>
+<div className={estilos.AnalisisLila} id="analisis">
+  <h2 className={estilos.lilaTitle}>Análisis</h2>
 
   {/* Tarjetas para los análisis */}
   <Grid container spacing={3} justifyContent="center">

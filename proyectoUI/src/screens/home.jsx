@@ -5,6 +5,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Tarjeta from "../components/tarjeta";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Home.module.css"; // Importamos el módulo CSS
+import logoIes from "../assets/imagenes/logoies.jpeg"
+import logoLila from "../assets/imagenes/logoLila.png"
 
 function Home() {
   return (
@@ -85,6 +87,7 @@ function Home() {
                 empresa={{
                   name: "lila software studio",
                   descript: "odokdkkdkkdkd",
+                  imagen: logoLila,
                 }}
               />
             </Link>
@@ -92,7 +95,8 @@ function Home() {
               <Tarjeta
                 empresa={{
                   name: "Instituto de Educación Superior N°9-024 de Lavalle",
-                  descript: "odokdkkdkkdkd",
+                  descript: "ies",
+                  imagen: logoIes,
                 }}
               />
             </Link>
@@ -101,6 +105,7 @@ function Home() {
                 empresa={{
                   name: "lila software studio",
                   descript: "odokdkkdkkdkd",
+                  imagen: logoLila,
                 }}
               />
             </Link>
@@ -130,7 +135,7 @@ function Home() {
                 <li>Contacto</li>
                 <li>Auditorías</li>
               </ul>
-              <p>© 2024 IWDS. All rights reserved.</p>
+              <p>© 2024 AWS. All rights reserved.</p>
             </div>
             <div className={styles.footerRight}>
               <ul className={styles.footerSocials}>
