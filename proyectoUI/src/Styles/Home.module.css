@@ -212,7 +212,7 @@ color: #141517;
 
 /* Estilos para la tarjeta individual */
 .cardAlign > * {
-
+  text-decoration: none;
   width: 300px; /* Ancho fijo de las tarjetas */
   transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
 }
