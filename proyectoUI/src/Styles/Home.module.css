@@ -39,16 +39,18 @@
 .contentSectionA {
   font-size: 22px;
   font-weight: bold;
-  background-color: #282a2e; /* Fondo oscuro similar */
-  padding: 40px; /* Más espaciado interno para darle aire */
-  border-radius: 20px; /* Bordes suavemente redondeados */
-  max-width: 900px; /* Tamaño máximo para la tarjeta */
-  margin: 50px 180px 300px 180px; /* Centrando la tarjeta */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
-              0 30px 60px rgba(0, 0, 0, 0.8);
-  position: relative; /* Para poder ajustar el contenido internamente */
-  color: white; /* Texto en blanco */
+  background-color: #282a2e;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 1100px; /* Aumenta el ancho máximo para que entren las tarjetas en una fila */
+  width: 90%; /* Opcional: define un ancho del 90% del contenedor padre */
+  margin: 50px auto; /* Centra el contenedor */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 30px 60px rgba(0, 0, 0, 0.8);
+  position: relative;
+  color: white;
 }
+
+
 
 .lead {
   text-align: left;
@@ -205,20 +207,42 @@ color: #141517;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
-  
-} 
-
-/* Estilos para la tarjeta individual */
-.cardAlign > * {
-  text-decoration: none;
-  width: 300px; /* Ancho fijo de las tarjetas */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+  flex-wrap: wrap;
 }
 
-.cardAlign > *:hover {
-  
-  transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el cursor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para mayor efecto */
+.card {
+  width: 350px; /* Aumenta el ancho de la tarjeta */
+  height: 300px; /* Aumenta el alto de la tarjeta */
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  max-width: 90%; /* Asegura que la imagen no se desborde del ancho */
+  max-height: 180px; /* Ajusta la altura de la imagen para las nuevas dimensiones */
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.cardTitle {
+  text-align: center;
+  font-size: 1em;
+  margin: 10px 0;
+  padding: 10px;
+  color: #fff;
 }

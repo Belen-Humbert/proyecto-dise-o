@@ -1,14 +1,50 @@
+import React, { useState } from "react";
+import { Modal, Box, TextField, Button, Typography, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import emailjs from 'emailjs-com';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Tarjeta from "../components/tarjeta";
 import { Link } from "react-router-dom";
-import styles from "../Styles/Home.module.css"; // Importamos el módulo CSS
-import logoIes from "../assets/imagenes/logoies.jpeg"
-import logoLila from "../assets/imagenes/logoLila.png"
+import styles from "../Styles/Home.module.css";
+import logoIes from "../assets/imagenes/logoies.jpeg";
+import logoLila from "../assets/imagenes/logoLila.png";
 
 function Home() {
+  const [openModal, setOpenModal] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", telefono: "", message: "" });
+
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      'service_p1itew8',        // Service ID
+      'template_kh9dvav',       // Template ID
+      {
+        nombre: formData.name,
+        email: formData.email,
+        telefono: formData.telefono,
+        mensaje: formData.message
+      },
+      'MMqTd0iWg8ACYzgdK'       // User ID (Clave pública)
+    ).then((response) => {
+      console.log("Mensaje enviado con éxito!", response.status, response.text);
+      handleCloseModal();
+    }).catch((error) => {
+      console.error("Hubo un error al enviar el mensaje:", error);
+    });
+  };
+
   return (
     <>
       <div className={styles.homeContainer}>
@@ -18,27 +54,20 @@ function Home() {
         <nav className={styles.navbar}>
           <ul className={styles.navbarMenu}>
             <li className={`${styles.navbarItem} ${styles.active}`}>
-              <Link to="/home" className={styles.navbarLink}>
-                Home 
-              </Link>
+              <Link to="/home" className={styles.navbarLink}>Home</Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/products" className={styles.navbarLink}>
-                Products
-              </Link>
+              <Link to="/products" className={styles.navbarLink}>Products</Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/blog" className={styles.navbarLink}>
-                Blog
-              </Link>
+              <Link to="/blog" className={styles.navbarLink}>Blog</Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/about" className={styles.navbarLink}>
-                About
-              </Link>
+              <Link to="/about" className={styles.navbarLink}>About</Link>
             </li>
           </ul>
         </nav>
+
         {/* Header */}
         <div id="home">
           <div className={styles.bgOverlay}>
@@ -75,39 +104,23 @@ function Home() {
           </div>
         </div>
 
-        {/* Portfolio Grid Section */}
-        <section className={styles.contentSectionA}> 
-         
+                {/* Portfolio Grid Section */}
+                <section className={styles.contentSectionA}> 
           <div>
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
           </div>
           <div className={styles.cardAlign}>
-            <Link to="/lila">
-              <Tarjeta
-                empresa={{
-                  name: "lila software studio",
-                  descript: "odokdkkdkkdkd",
-                  imagen: logoLila,
-                }}
-              />
+            <Link to="/lila" className={styles.card}>
+              <img src={logoLila} alt="Lila Software Studio" />
+              <div className={styles.cardTitle}>Lila Software Studio</div>
             </Link>
-            <Link to="/ies">
-              <Tarjeta
-                empresa={{
-                  name: "Instituto de Educación Superior N°9-024 de Lavalle",
-                  descript: "ies",
-                  imagen: logoIes,
-                }}
-              />
+            <Link to="/ies" className={styles.card}>
+              <img src={logoIes} alt="IES Lavalle" />
+              <div className={styles.cardTitle}>Instituto de Educación Superior N°9-024 de Lavalle</div>
             </Link>
-            <Link to="/lila">
-              <Tarjeta
-                empresa={{
-                  name: "lila software studio",
-                  descript: "odokdkkdkkdkd",
-                  imagen: logoLila,
-                }}
-              />
+            <Link to="/lila" className={styles.card}>
+              <img src={logoLila} alt="Lila Software Studio" />
+              <div className={styles.cardTitle}>Lila Software Studio</div>
             </Link>
           </div>
         </section>
@@ -132,7 +145,9 @@ function Home() {
               <ul className={styles.footerMenu}>
                 <li>About</li>
                 <li>Inicio</li>
-                <li>Contacto</li>
+                <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
+                  Contacto
+                </li>
                 <li>Auditorías</li>
               </ul>
               <p>© 2024 AWS. All rights reserved.</p>
@@ -163,6 +178,71 @@ function Home() {
             </div>
           </div>
         </footer>
+
+        {/* Modal de Contacto */}
+        <Modal open={openModal} onClose={handleCloseModal}>
+          <Box sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 400,
+            bgcolor: 'background.paper',
+            borderRadius: 2,
+            boxShadow: 24,
+            p: 4
+          }}>
+            <IconButton
+              onClick={handleCloseModal}
+              sx={{ position: 'absolute', top: 8, right: 8 }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" component="h2">
+              Contáctanos
+            </Typography>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                name="name"
+                label="Nombre"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                name="email"
+                label="Correo Electrónico"
+                type="email"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                name="telefono"
+                label="Teléfono"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                name="message"
+                label="Mensaje"
+                fullWidth
+                margin="normal"
+                multiline
+                rows={4}
+                onChange={handleInputChange}
+                required
+              />
+              <Button type="submit" variant="contained" color="primary" fullWidth>
+                Enviar
+              </Button>
+            </form>
+          </Box>
+        </Modal>
       </div>
     </>
   );
