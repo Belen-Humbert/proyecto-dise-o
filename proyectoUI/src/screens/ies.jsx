@@ -9,8 +9,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
-// import organigramaIes from '../assets/imagenes/organigramaIes.png';
-// import techIes from '../assets/imagenes/techIes.png';
+import organigramaIes from '../assets/imagenes/ORGANIGRAMAies.png';
+import TICies from '../assets/imagenes/TICies.png';
 import logoIes from '../assets/imagenes/logoIes.jpeg';
 import '../Styles/ies.css';
 
@@ -67,7 +67,7 @@ const Ies = () => {
       {/* Sección del acordeón */}
       <div className="AboutIes" id="about">
         <div className="accordion-wrapper">
-          <h2 className="ies-title h2-ies">Sobre La Empresa</h2>
+          <h2 className="ies-title h2-ies">IES 9-024 Lavalle</h2>
 
           {/* Accordion para Descripción de la Empresa */}
           <Accordion 
@@ -223,9 +223,23 @@ const Ies = () => {
         </div>
       </div>
 
+
+  <div className="OrganigramaIes" id="organigramaIes">
+  <h2 className="iesTitle">Organigrama</h2>
+  <div className="imgRow">
+    <div className="imgContainer">
+      <img src={organigramaIes} alt="Organigrama Ies" className="zoomableImage" />
+    </div>
+    <div className="imgContainer">
+      <img src={TICies} alt="Tech Ies" className="zoomableImage" />
+    </div>
+  </div>
+</div>
+
+
       {/* Sección Análisis */}
       <div className="AnalisisIes" id="analisis">
-        <h2 className="ies-title h2-ies">Análisis</h2>
+        <h2 className="ies-title h2-ies">Más información Institucional</h2>
 
         {/* Tarjetas para los análisis */}
         <Grid container spacing={3} justifyContent="center">

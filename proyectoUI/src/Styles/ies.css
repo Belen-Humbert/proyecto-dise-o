@@ -147,7 +147,12 @@ body {
     padding: 40px;
 }
 
-.img-row {
+.iesTitle {
+    font-size: 2rem;
+    color: #936A9F;
+}
+
+.imgRow {
     display: flex;
     justify-content: center;
     gap: 0;
@@ -155,7 +160,7 @@ body {
     position: relative;
 }
 
-.img-container {
+.imgContainer {
     width: 350px;
     height: auto;
     margin: 0;
@@ -167,7 +172,7 @@ body {
     transition: z-index 0.3s ease-in-out;
 }
 
-.zoomable-image {
+.zoomableImage {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -176,21 +181,22 @@ body {
     z-index: 1;
 }
 
-.img-container:hover {
+.imgContainer:hover {
     z-index: 10;
     margin-right: 20px;
 }
 
-.img-container:hover .zoomable-image {
+.imgContainer:hover .zoomableImage {
     transform: scale(1.5);
     z-index: 2;
 }
 
 @media (max-width: 768px) {
-    .img-row {
+    .imgRow {
         flex-direction: column;
     }
 }
+
 
 /* Sección Análisis */
 .AnalisisIes {
@@ -238,13 +244,14 @@ body {
 }
 
 /* Títulos de las secciones centrados */
-.ies-title {
-    font-size: 2.5rem;
+.iesTitle, .ies-title {
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
-    color: #0073E6; /* Color morado */
+    color: #0073E6 !important;
     text-align: center;
     margin-bottom: 30px;
 }
+
 
 /* Zoom en las tarjetas */
 .zoomable-card {
