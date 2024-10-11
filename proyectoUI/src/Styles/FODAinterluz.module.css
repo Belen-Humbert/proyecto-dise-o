@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos generales */
+.FODAinterluzContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título principal */
+.FODAinterluzTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #68B649 !important; 
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Texto introductorio */
+.FODAinterluzIntroText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666 !important;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: block;
+}
+
+/* Sección FODA */
+.FODAinterluzSection {
+  margin-top: 50px;
+}
+
+/* Tarjetas */
+.FODAinterluzPaper {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de movimiento suave sin aumento de tamaño */
+.FODAinterluzPaper:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Subtítulos */
+.FODAinterluzSubtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #68B649 !important; 
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Texto en las tarjetas */
+.FODAinterluzText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Imagen */
+.FODAinterluzImageContainer {
+  margin-top: 50px;
+  display: flex;  /* Usamos flexbox para centrar */
+  justify-content: center;  /* Centramos la imagen horizontalmente */
+}
+
+.FODAinterluzImage {
+  max-width: 800px;  /* Limita el ancho máximo de la imagen */
+  width: 100%;  /* Asegura que ocupe el 100% del ancho disponible */
+  height: auto;  /* Mantiene las proporciones de la imagen */
+  transition: transform 0.3s ease-in-out;  /* Efecto suave al hacer hover */
+}
+
+.FODAinterluzImage:hover {
+  transform: scale(1.05);  /* Aumenta el tamaño de la imagen al pasar el cursor */
+}

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import styles from "../Styles/Home.module.css";
 import logoIes from "../assets/imagenes/logoies.jpeg";
 import logoLila from "../assets/imagenes/logoLila.png";
+import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
 
 function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -118,9 +119,9 @@ function Home() {
               <img src={logoIes} alt="IES Lavalle" />
               <div className={styles.cardTitle}>Instituto de Educación Superior N°9-024 de Lavalle</div>
             </Link>
-            <Link to="/lila" className={styles.card}>
-              <img src={logoLila} alt="Lila Software Studio" />
-              <div className={styles.cardTitle}>Lila Software Studio</div>
+            <Link to="/interluz" className={styles.card}>
+              <img src={logoInterluz} alt="Lila Software Studio" />
+              <div className={styles.cardTitle}>Interluz</div>
             </Link>
           </div>
         </section>
@@ -181,68 +182,118 @@ function Home() {
 
         {/* Modal de Contacto */}
         <Modal open={openModal} onClose={handleCloseModal}>
-          <Box sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 400,
-            bgcolor: 'background.paper',
-            borderRadius: 2,
-            boxShadow: 24,
-            p: 4
-          }}>
-            <IconButton
-              onClick={handleCloseModal}
-              sx={{ position: 'absolute', top: 8, right: 8 }}
-            >
-              <CloseIcon />
-            </IconButton>
-            <Typography variant="h6" component="h2">
-              Contáctanos
-            </Typography>
-            <form onSubmit={handleSubmit}>
-              <TextField
-                name="name"
-                label="Nombre"
-                fullWidth
-                margin="normal"
-                onChange={handleInputChange}
-                required
-              />
-              <TextField
-                name="email"
-                label="Correo Electrónico"
-                type="email"
-                fullWidth
-                margin="normal"
-                onChange={handleInputChange}
-                required
-              />
-              <TextField
-                name="telefono"
-                label="Teléfono"
-                fullWidth
-                margin="normal"
-                onChange={handleInputChange}
-                required
-              />
-              <TextField
-                name="message"
-                label="Mensaje"
-                fullWidth
-                margin="normal"
-                multiline
-                rows={4}
-                onChange={handleInputChange}
-                required
-              />
-              <Button type="submit" variant="contained" color="primary" fullWidth>
-                Enviar
-              </Button>
-            </form>
-          </Box>
-        </Modal>
+        <Box sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 400,
+          bgcolor: '#282a2e', 
+          borderRadius: 2,
+          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.8), 0 30px 60px rgba(0, 0, 0, 0.8)', 
+          p: 4,
+          color: '#fff' 
+        }}>
+    <IconButton
+      onClick={handleCloseModal}
+      sx={{ position: 'absolute', top: 8, right: 8, color: '#f45027' }} 
+    >
+      <CloseIcon />
+    </IconButton>
+    <Typography variant="h6" component="h2" sx={{ color: '#f45027' }}>
+      Contáctanos
+    </Typography>
+    <form onSubmit={handleSubmit}>
+      <TextField
+        name="name"
+        label="Nombre"
+        fullWidth
+        margin="normal"
+        onChange={handleInputChange}
+        required
+        sx={{
+          input: { color: '#aba7a6' }, 
+          '& .MuiInputLabel-root': { color: '#aba7a6' }, 
+          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027' 
+          },
+          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027' 
+          }
+        }}
+      />
+      <TextField
+        name="email"
+        label="Correo Electrónico"
+        type="email"
+        fullWidth
+        margin="normal"
+        onChange={handleInputChange}
+        required
+        sx={{
+          input: { color: '#aba7a6' },
+          '& .MuiInputLabel-root': { color: '#aba7a6' },
+          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          },
+          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          }
+        }}
+      />
+      <TextField
+        name="telefono"
+        label="Teléfono"
+        fullWidth
+        margin="normal"
+        onChange={handleInputChange}
+        required
+        sx={{
+          input: { color: '#aba7a6' },
+          '& .MuiInputLabel-root': { color: '#aba7a6' },
+          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          },
+          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          }
+        }}
+      />
+      <TextField
+        name="message"
+        label="Mensaje"
+        fullWidth
+        margin="normal"
+        multiline
+        rows={4}
+        onChange={handleInputChange}
+        required
+        sx={{
+          input: { color: '#aba7a6' },
+          '& .MuiInputLabel-root': { color: '#aba7a6' },
+          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          },
+          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#f45027'
+          }
+        }}
+      />
+      <Button 
+        type="submit" 
+        variant="contained" 
+        fullWidth 
+        sx={{
+          bgcolor: '#f45027', 
+          color: '#141517', 
+          '&:hover': { bgcolor: '#ed7226' }
+        }}
+      >
+        Enviar
+      </Button>
+      </form>
+    </Box>
+    </Modal>
       </div>
     </>
   );

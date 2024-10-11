@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos generales */
+.pestInterluzContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título principal */
+.pestInterluzTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #68B649 !important; 
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Texto introductorio */
+.pestInterluzIntroText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666 !important;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: block;
+}
+
+/* Acordeón */
+.accordionWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilos del acordeón */
+.pestInterluzAccordion {
+  background-color: #68B649 !important; /* Fondo cerrado */
+  color: white !important; /* Texto en blanco */
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Títulos del acordeón */
+.pestInterluzAccordionSummary {
+  background-color: #68B649 !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  justify-content: center !important;
+}
+
+/* Detalles del acordeón */
+.pestInterluzAccordionDetails {
+  background-color: #f9f9f9 !important;
+  color: #666 !important;
+  font-family: 'Poppins', sans-serif !important;
+  line-height: 1.7 !important;
+  padding: 20px;
+}
+
+.pestInterluzImageContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.pestInterluzImage {
+  max-width: 800px; /* Limita el ancho máximo de la imagen */
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  transition: transform 0.3s ease-in-out;
+}
+
+.pestInterluzImage:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen al hacer hover */
+}

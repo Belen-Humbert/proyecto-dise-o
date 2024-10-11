@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos del contenedor principal */
+.porterInterluzContainer {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Título principal */
+.porterInterluzTitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  color: #68B649;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Texto introductorio */
+.porterInterluzIntroText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666 !important;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contenedor para centrar los acordeones */
+.accordionWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilos de los acordeones */
+.porterInterluzAccordion {
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Cabecera del acordeón */
+.porterInterluzAccordionSummary {
+  background-color: #68B649 !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+}
+
+/* Detalles del acordeón */
+.porterInterluzAccordionDetails {
+  background-color: #ffffff !important;
+  color: #666 !important;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Ícono de expansión */
+.expandIcon {
+  color: white !important;
+}
+
+/* Estilo del texto */
+.porterInterluzText {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.2rem;
+  color: #666 !important;
+  line-height: 1.7;
+}
+
+/* Estilos para la imagen */
+.imageContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.porterInterluzImage {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.porterInterluzImage:hover {
+  transform: scale(1.05);
+}
