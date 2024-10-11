@@ -11,6 +11,8 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import logoInterluz from '../assets/imagenes/interluz.jpeg';
 import estilos from '../Styles/Interluz.module.css';
+import organigramaInterluz from '../assets/imagenes/organigramaINTERLUZ.png';
+import ticInterluz from '../assets/imagenes/TICinterluz.png'; 
 
 const Interluz = () => {
   const navigate = useNavigate(); 
@@ -149,20 +151,18 @@ Interluz aspira a ser el proveedor líder de internet de alta velocidad en Laval
         </div>
       </div>
 
-      {/* Sección del organigrama (comentada) */}
-      {/*
+      {/* Sección del organigrama */}
       <div className={estilos.OrganigramaInterluz} id="organigrama">
-        <h2 className={estilos.interluzTitle}>Organigrama</h2>
-        <div className={estilos.imgRow}>
-          <div className={estilos.imgContainer}>
-            <img src={organigramaLila} alt="Organigrama" className={estilos.zoomableImage} />
-          </div>
-          <div className={estilos.imgContainer}>
-            <img src={techLila} alt="Tech Lila" className={estilos.zoomableImage} />
-          </div>
-        </div>
+      <h2 className={estilos.interluzTitle}>Organigrama</h2>
+      <div className={estilos.imgRow}>
+      <div className={estilos.imgContainer}>
+      <img src={organigramaInterluz} alt="Organigrama Interluz" className={estilos.zoomableImage} />
       </div>
-      */}
+      <div className={estilos.imgContainer}>
+      <img src={ticInterluz} alt="TIC Interluz" className={estilos.zoomableImage} />
+      </div>
+    </div>
+    </div>
 
       {/* Sección Análisis */}
       <div className={estilos.AnalisisInterluz} id="analisis">

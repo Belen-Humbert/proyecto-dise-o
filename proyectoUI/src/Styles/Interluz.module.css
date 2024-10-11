@@ -133,12 +133,57 @@ body {
 }
 
 /* Estilos del organigrama (comentado por ahora) */
-/*
+/* Adaptación de estilos del organigrama */
 .OrganigramaInterluz {
     text-align: center;
     padding: 40px;
 }
-*/
+
+.imgRow {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
+}
+
+.imgContainer {
+    width: 350px;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+    border: 2px solid #936A9F;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    transition: z-index 0.3s ease-in-out;
+}
+
+.zoomableImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.imgContainer:hover {
+    z-index: 10;
+    margin-right: 20px;
+}
+
+.imgContainer:hover .zoomableImage {
+    transform: scale(2.4);
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .imgRow {
+        flex-direction: column;
+    }
+}
+
 
 /* Sección Análisis */
 .AnalisisInterluz {
