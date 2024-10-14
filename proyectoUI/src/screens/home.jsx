@@ -1,21 +1,35 @@
 import React, { useState } from "react";
-import { Modal, Box, TextField, Button, Typography, IconButton } from "@mui/material";
+import {
+  Modal,
+  Box,
+  TextField,
+  Button,
+  Typography,
+  IconButton,
+} from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Tarjeta from "../components/tarjeta";
+import Card from "../components/card";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Home.module.css";
 import logoIes from "../assets/imagenes/logoies.jpeg";
 import logoLila from "../assets/imagenes/logoLila.png";
 import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
+import imagenAl from "../assets/imagenes/alejo.jpeg";
+import imagenBel from "../assets/imagenes/belen.jpg";
 
 function Home() {
   const [openModal, setOpenModal] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", telefono: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    telefono: "",
+    message: "",
+  });
 
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
@@ -28,22 +42,29 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send(
-      'service_p1itew8',        // Service ID
-      'template_kh9dvav',       // Template ID
-      {
-        nombre: formData.name,
-        email: formData.email,
-        telefono: formData.telefono,
-        mensaje: formData.message
-      },
-      'MMqTd0iWg8ACYzgdK'       // User ID (Clave pública)
-    ).then((response) => {
-      console.log("Mensaje enviado con éxito!", response.status, response.text);
-      handleCloseModal();
-    }).catch((error) => {
-      console.error("Hubo un error al enviar el mensaje:", error);
-    });
+    emailjs
+      .send(
+        "service_p1itew8", // Service ID
+        "template_kh9dvav", // Template ID
+        {
+          nombre: formData.name,
+          email: formData.email,
+          telefono: formData.telefono,
+          mensaje: formData.message,
+        },
+        "MMqTd0iWg8ACYzgdK" // User ID (Clave pública)
+      )
+      .then((response) => {
+        console.log(
+          "Mensaje enviado con éxito!",
+          response.status,
+          response.text
+        );
+        handleCloseModal();
+      })
+      .catch((error) => {
+        console.error("Hubo un error al enviar el mensaje:", error);
+      });
   };
 
   return (
@@ -55,16 +76,24 @@ function Home() {
         <nav className={styles.navbar}>
           <ul className={styles.navbarMenu}>
             <li className={`${styles.navbarItem} ${styles.active}`}>
-              <Link to="/home" className={styles.navbarLink}>Home</Link>
+              <Link to="/home" className={styles.navbarLink}>
+                Home
+              </Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/products" className={styles.navbarLink}>Products</Link>
+              <Link to="/products" className={styles.navbarLink}>
+                Products
+              </Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/blog" className={styles.navbarLink}>Blog</Link>
+              <Link to="/blog" className={styles.navbarLink}>
+                Blog
+              </Link>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/about" className={styles.navbarLink}>About</Link>
+              <Link to="/about" className={styles.navbarLink}>
+                About
+              </Link>
             </li>
           </ul>
         </nav>
@@ -105,8 +134,8 @@ function Home() {
           </div>
         </div>
 
-                {/* Portfolio Grid Section */}
-                <section className={styles.contentSectionA}> 
+        {/* Portfolio Grid Section */}
+        <section className={styles.contentSectionA}>
           <div>
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
           </div>
@@ -117,7 +146,9 @@ function Home() {
             </Link>
             <Link to="/ies" className={styles.card}>
               <img src={logoIes} alt="IES Lavalle" />
-              <div className={styles.cardTitle}>Instituto de Educación Superior N°9-024 de Lavalle</div>
+              <div className={styles.cardTitle}>
+                Instituto de Educación Superior N°9-024 de Lavalle
+              </div>
             </Link>
             <Link to="/interluz" className={styles.card}>
               <img src={logoInterluz} alt="Lila Software Studio" />
@@ -133,6 +164,24 @@ function Home() {
             <h3 className={styles.sectionSubheading}>
               Conoce a los expertos detrás de AuditaWeb Solutions
             </h3>
+          </div>
+          <div className={styles.cardAlign} >
+            <Card 
+              person={{ 
+                name: "Alejo Montuori",
+                description: "boquita",
+                imagen: imagenAl,
+                alt: "Foto de Alejo",
+              }}
+            />
+            <Card className={styles.card}
+              person={{
+                name: "Belen Humbert",
+                description: "boquita",
+                imagen: imagenBel,
+                alt: "Foto de Belen",
+              }}
+            />
           </div>
         </div>
 
@@ -182,118 +231,125 @@ function Home() {
 
         {/* Modal de Contacto */}
         <Modal open={openModal} onClose={handleCloseModal}>
-        <Box sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: 400,
-          bgcolor: '#282a2e', 
-          borderRadius: 2,
-          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.8), 0 30px 60px rgba(0, 0, 0, 0.8)', 
-          p: 4,
-          color: '#fff' 
-        }}>
-    <IconButton
-      onClick={handleCloseModal}
-      sx={{ position: 'absolute', top: 8, right: 8, color: '#f45027' }} 
-    >
-      <CloseIcon />
-    </IconButton>
-    <Typography variant="h6" component="h2" sx={{ color: '#f45027' }}>
-      Contáctanos
-    </Typography>
-    <form onSubmit={handleSubmit}>
-      <TextField
-        name="name"
-        label="Nombre"
-        fullWidth
-        margin="normal"
-        onChange={handleInputChange}
-        required
-        sx={{
-          input: { color: '#aba7a6' }, 
-          '& .MuiInputLabel-root': { color: '#aba7a6' }, 
-          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027' 
-          },
-          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027' 
-          }
-        }}
-      />
-      <TextField
-        name="email"
-        label="Correo Electrónico"
-        type="email"
-        fullWidth
-        margin="normal"
-        onChange={handleInputChange}
-        required
-        sx={{
-          input: { color: '#aba7a6' },
-          '& .MuiInputLabel-root': { color: '#aba7a6' },
-          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          },
-          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          }
-        }}
-      />
-      <TextField
-        name="telefono"
-        label="Teléfono"
-        fullWidth
-        margin="normal"
-        onChange={handleInputChange}
-        required
-        sx={{
-          input: { color: '#aba7a6' },
-          '& .MuiInputLabel-root': { color: '#aba7a6' },
-          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          },
-          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          }
-        }}
-      />
-      <TextField
-        name="message"
-        label="Mensaje"
-        fullWidth
-        margin="normal"
-        multiline
-        rows={4}
-        onChange={handleInputChange}
-        required
-        sx={{
-          input: { color: '#aba7a6' },
-          '& .MuiInputLabel-root': { color: '#aba7a6' },
-          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          },
-          '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f45027'
-          }
-        }}
-      />
-      <Button 
-        type="submit" 
-        variant="contained" 
-        fullWidth 
-        sx={{
-          bgcolor: '#f45027', 
-          color: '#141517', 
-          '&:hover': { bgcolor: '#ed7226' }
-        }}
-      >
-        Enviar
-      </Button>
-      </form>
-    </Box>
-    </Modal>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 400,
+              bgcolor: "#282a2e",
+              borderRadius: 2,
+              boxShadow:
+                "0 20px 40px rgba(0, 0, 0, 0.8), 0 30px 60px rgba(0, 0, 0, 0.8)",
+              p: 4,
+              color: "#fff",
+            }}
+          >
+            <IconButton
+              onClick={handleCloseModal}
+              sx={{ position: "absolute", top: 8, right: 8, color: "#f45027" }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" component="h2" sx={{ color: "#f45027" }}>
+              Contáctanos
+            </Typography>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                name="name"
+                label="Nombre"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <TextField
+                name="email"
+                label="Correo Electrónico"
+                type="email"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <TextField
+                name="telefono"
+                label="Teléfono"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <TextField
+                name="message"
+                label="Mensaje"
+                fullWidth
+                margin="normal"
+                multiline
+                rows={4}
+                onChange={handleInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                fullWidth
+                sx={{
+                  bgcolor: "#f45027",
+                  color: "#141517",
+                  "&:hover": { bgcolor: "#ed7226" },
+                }}
+              >
+                Enviar
+              </Button>
+            </form>
+          </Box>
+        </Modal>
       </div>
     </>
   );
