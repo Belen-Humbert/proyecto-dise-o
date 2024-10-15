@@ -15,16 +15,46 @@ import logoIes from '../assets/imagenes/logoIes-removebg-preview.png';
 import '../Styles/ies.css';
 
 const carreras = [
-  'Profesorado de Educación Secundaria en Lengua y Literatura',
-  'Profesorado de Educación Secundaria en Matemática',
-  'Profesorado de Educación Especial con Orientación en Discapacidad Intelectual',
-  'Profesorado de Educación Secundaria Técnica en Incumbencia con el Título de Base',
-  'Tecnicatura Superior en Comunicación Social',
-  'Tecnicatura Superior en Turismo y Hotelería',
-  'Tecnicatura Superior en Enología e Industrias de los Alimentos',
-  'Tecnicatura Superior en Administración de Empresas',
-  'Tecnicatura Superior en Desarrollo de Software',
-  'Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente'
+  {
+    nombre: 'Profesorado de Educación Secundaria en Lengua y Literatura',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Profesorado de Educación Secundaria en Matemática',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Profesorado de Educación Especial con Orientación en Discapacidad Intelectual',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Profesorado de Educación Secundaria Técnica en Incumbencia con el Título de Base',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/profesorado-de-educacion-secundaria-tecnica-en-incumbencia-con-el-titulo-de-base/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Comunicación Social',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-comunicacion-social-con-orientacion-al-desarrollo-regional-y-local/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Turismo y Hotelería',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-y-hoteleria/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Enología e Industrias de los Alimentos',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Administración de Empresas',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Desarrollo de Software',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-analisis-y-programacion-de-sistemas/', // Reemplaza con la URL real
+  },
+  {
+    nombre: 'Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente',
+    url: 'https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/', // Reemplaza con la URL real
+  },
 ];
 
 const Ies = () => {
@@ -50,18 +80,19 @@ const Ies = () => {
       <div className="carreras-section" id="carreras">
         <h2 className="ies-title h2-ies">Carreras Disponibles</h2>
         <Grid container spacing={2} justifyContent="center">
-          {carreras.map((carrera, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card sx={{ minHeight: 120 }}>
-                <CardContent>
-                  <Typography variant="body1" component="div" sx={{ fontWeight: 'bold', fontSize: '0.95rem' }}>
-                    {carrera}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+  {carreras.map((carrera, index) => (
+    <Grid item xs={12} sm={6} md={3} key={index}>
+      <Card sx={{ minHeight: 120 }} onClick={() => window.location.href = carrera.url}>
+        <CardContent>
+          <Typography variant="body1" component="div" sx={{ fontWeight: 'bold', fontSize: '0.95rem' }}>
+            {carrera.nombre} {/* Cambiado a carrera.nombre */}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
+  ))}
+</Grid>
+
       </div>
 
       {/* Sección del acordeón */}
@@ -246,7 +277,7 @@ const Ies = () => {
           {/* Tarjeta Análisis FODA */}
           <Grid item xs={12} sm={4}>
             <Card 
-              onClick={() => navigate("/fodaies")} 
+              onClick={() => navigate("/ies/foda")} 
               sx={{ 
                 cursor: "pointer", 
                 transition: "transform 0.3s ease-in-out", 
