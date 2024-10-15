@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 .homeContainer {
   margin: 0;
   padding: 0;

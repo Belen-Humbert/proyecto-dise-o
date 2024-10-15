@@ -76,24 +76,24 @@ function Home() {
         <nav className={styles.navbar}>
           <ul className={styles.navbarMenu}>
             <li className={`${styles.navbarItem} ${styles.active}`}>
-              <Link to="/home" className={styles.navbarLink}>
-                Home
-              </Link>
+              <a href="#about" className={styles.navbarLink}>
+                Sobre Nosotros
+              </a>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/products" className={styles.navbarLink}>
-                Products
-              </Link>
+              <a href="#portfolio" className={styles.navbarLink}>
+                Auditorías Realizadas
+              </a>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/blog" className={styles.navbarLink}>
-                Blog
-              </Link>
+              <a href="#team" className={styles.navbarLink}>
+                Nuestro Equipo
+              </a>
             </li>
             <li className={styles.navbarItem}>
-              <Link to="/about" className={styles.navbarLink}>
-                About
-              </Link>
+              <a href="#footer" className={styles.navbarLink}>
+                Contáctanos
+              </a>
             </li>
           </ul>
         </nav>
@@ -135,7 +135,7 @@ function Home() {
         </div>
 
         {/* Portfolio Grid Section */}
-        <section className={styles.contentSectionA}>
+        <section id="portfolio" className={styles.contentSectionA}>
           <div>
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
           </div>
@@ -151,7 +151,7 @@ function Home() {
               </div>
             </Link>
             <Link to="/interluz" className={styles.card}>
-              <img src={logoInterluz} alt="Lila Software Studio" />
+              <img src={logoInterluz} alt="Interluz" />
               <div className={styles.cardTitle}>Interluz</div>
             </Link>
           </div>
@@ -165,16 +165,16 @@ function Home() {
               Conoce a los expertos detrás de AuditaWeb Solutions
             </h3>
           </div>
-          <div className={styles.cardAlign} >
-            <Card 
-              person={{ 
+          <div className={styles.cardAlign}>
+            <Card
+              person={{
                 name: "Alejo Montuori",
                 description: "boquita",
                 imagen: imagenAl,
                 alt: "Foto de Alejo",
               }}
             />
-            <Card className={styles.card}
+            <Card
               person={{
                 name: "Belen Humbert",
                 description: "boquita",
