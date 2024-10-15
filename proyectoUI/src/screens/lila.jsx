@@ -11,7 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import organigramaLila from '../assets/imagenes/organigramaLila.png';
 import techLila from '../assets/imagenes/techLila.png';
-import logoLila from '../assets/imagenes/logoLila.png';
+import logoLila from '../assets/imagenes/logoLila-removebg-preview.png';
 import estilos from '../Styles/Lila.module.css';
 
 const Lila = () => {

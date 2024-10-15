@@ -11,7 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import organigramaIes from '../assets/imagenes/ORGANIGRAMAies.png';
 import TICies from '../assets/imagenes/TICies.png';
-import logoIes from '../assets/imagenes/logoIes.jpeg';
+import logoIes from '../assets/imagenes/logoIes-removebg-preview.png';
 import '../Styles/ies.css';
 
 const carreras = [

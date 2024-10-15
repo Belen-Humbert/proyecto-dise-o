@@ -9,7 +9,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
-import logoInterluz from '../assets/imagenes/interluz.jpeg';
+import logoInterluz from '../assets/imagenes/interluz-removebg-preview.png';
 import estilos from '../Styles/Interluz.module.css';
 import organigramaInterluz from '../assets/imagenes/organigramaINTERLUZ.png';
 import ticInterluz from '../assets/imagenes/TICinterluz.png'; 
