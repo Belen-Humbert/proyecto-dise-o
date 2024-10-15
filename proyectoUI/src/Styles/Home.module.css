@@ -1,4 +1,4 @@
-/* Asegurar que el fondo cubra todo y no haya margen o relleno */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 .homeContainer {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@
   z-index: -1; /* Mantén el fondo detrás de otros elementos */
 }
 
+
 .introMessage {
   position: relative;
   padding-top: 20%;
@@ -23,9 +24,11 @@
 .introMessage > h1 {
   text-align: center;
   margin-top: -50px;
-  font-size: 5em;
-  color: #ff4500;
+  font-size: 5em; /* Tamaño base del texto */
+  color: #ff4500; /* Color naranja para todo el texto */
+  font-family: 'Righteous';
 }
+
 
 /*small header*/
 .introMessage > h3 {
