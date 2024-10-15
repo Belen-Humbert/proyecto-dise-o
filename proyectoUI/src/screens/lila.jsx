@@ -173,7 +173,7 @@ const Lila = () => {
     {/* Tarjeta Análisis FODA */}
     <Grid item xs={12} sm={4}>
       <Card 
-        onClick={() => navigate("/fodaLila")} 
+        onClick={() => navigate("/lila/foda")} 
         sx={{ 
           cursor: "pointer", 
           transition: "transform 0.3s ease-in-out", 
@@ -194,7 +194,7 @@ const Lila = () => {
     {/* Tarjeta Análisis PEST */}
     <Grid item xs={12} sm={4}>
       <Card 
-        onClick={() => navigate("/pest")} 
+        onClick={() => navigate("/lila/pest")} 
         sx={{ 
           cursor: "pointer", 
           transition: "transform 0.3s ease-in-out", 
@@ -215,7 +215,7 @@ const Lila = () => {
     {/* Tarjeta Análisis 5 Fuerzas de Porter */}
     <Grid item xs={12} sm={4}>
       <Card 
-        onClick={() => navigate("/porter")} 
+        onClick={() => navigate("/lila/porter")} 
         sx={{ 
           cursor: "pointer", 
           transition: "transform 0.3s ease-in-out", 
