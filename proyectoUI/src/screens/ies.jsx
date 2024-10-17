@@ -120,7 +120,7 @@ const Ies = () => {
                 }}
                 className="h5-ies"
               >
-                <strong>Descripción de la Empresa</strong>
+                <strong>Descripción de la Institución</strong>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -133,8 +133,7 @@ const Ies = () => {
                 }}
                 className="p-ies"
               >
-                Ies Software Studio es una empresa de desarrollo de software que se especializa en la creación de productos innovadores, con un enfoque en agregar valor al mercado y proporcionar soluciones personalizadas a sus clientes.
-              </Typography>
+              El Instituto de Educación Superior Nº 9-024 Lavalle (IES Nº 9-024) es una institución pública en Mendoza, Argentina, dedicada a la formación docente y técnica. Fundada en 2009, su oferta educativa incluye profesorados y tecnicaturas, con un fuerte enfoque en la integración de sus estudiantes a la realidad local y regional mediante prácticas profesionales y proyectos de extensión. Su misión es brindar una formación accesible y de calidad, adaptada a las necesidades del contexto socioproductivo de Lavalle. El IES Nº 9-024 se destaca por su vinculación con la comunidad y su compromiso con el desarrollo educativo y social del departamento.              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -171,7 +170,7 @@ const Ies = () => {
                 }}
                 className="p-ies"
               >
-                La misión de Ies es "Ser el Merlín de cada loco".
+                La visión del instituto es ser una referencia en formación docente y técnica en Lavalle, destacándose por su compromiso con la comunidad, la innovación educativa y la integración de sus estudiantes al entorno socio-productivo para contribuir al desarrollo regional. Su misión es formar profesionales competentes y comprometidos con el crecimiento educativo y socioeconómico local, ofreciendo una educación de calidad accesible, que combine teoría y práctica, y promueva la investigación y la extensión para responder a las necesidades del territorio.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -209,7 +208,7 @@ const Ies = () => {
                 }}
                 className="p-ies"
               >
-                Los objetivos generales de Ies incluyen la integración de la IA en sus procesos.
+                Los objetivos generales del instituto se centran en brindar formación académica de calidad en carreras docentes y técnicas, atendiendo a las demandas del sistema educativo y el mercado laboral regional. Promueve la integración de los estudiantes a la comunidad mediante prácticas profesionales, proyectos de investigación y extensión, fomentando competencias sociales, técnicas y pedagógicas. Además, busca fortalecer la vinculación con organizaciones locales para potenciar su impacto social, y consolidar una gestión participativa e inclusiva, asegurando la participación de todos los actores en la toma de decisiones y el diseño de propuestas educativas.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -247,8 +246,7 @@ const Ies = () => {
                 }}
                 className="p-ies"
               >
-                El core del negocio de Ies se organiza en tres áreas clave: Bootcamp, Studio y Products.
-              </Typography>
+              El core del IES Nº 9-024 se centra en la formación de docentes y técnicos capacitados para enfrentar los desafíos del contexto educativo y productivo local. Esto implica no solo la enseñanza de conocimientos teóricos, sino la creación de experiencias de aprendizaje prácticas y contextuales que preparen a los estudiantes para intervenir en su comunidad, integrando la investigación y el desarrollo de capacidades que respondan a las necesidades del departamento de Lavalle y sus alrededores.              </Typography>
             </AccordionDetails>
           </Accordion>
         </div>
