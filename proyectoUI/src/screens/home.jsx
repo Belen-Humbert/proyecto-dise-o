@@ -21,7 +21,7 @@ import logoLila from "../assets/imagenes/logoLila.png";
 import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
 import imagenAl from "../assets/imagenes/alejo.jpeg";
 import imagenBel from "../assets/imagenes/belen.jpg";
-
+import Tarjeta from "../components/tarjeta"
 function Home() {
   const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -140,20 +140,31 @@ function Home() {
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
           </div>
           <div className={styles.cardAlign}>
-            <Link to="/lila" className={styles.card}>
-              <img src={logoLila} alt="Lila Software Studio" />
-              <div className={styles.cardTitle}>Lila Software Studio</div>
-            </Link>
-            <Link to="/ies" className={styles.card}>
-              <img src={logoIes} alt="IES Lavalle" />
-              <div className={styles.cardTitle}>
-                Instituto de Educación Superior N°9-024 de Lavalle
-              </div>
-            </Link>
-            <Link to="/interluz" className={styles.card}>
-              <img src={logoInterluz} alt="Interluz" />
-              <div className={styles.cardTitle}>Interluz</div>
-            </Link>
+      
+          <Link to="/lila" className={styles.card} >
+            <Tarjeta
+              empresa={{
+                name: "Lila Software Studio",
+                imagen:logoLila
+              }}
+            />
+          </Link>
+          <Link to="/interluz" className={styles.card}>
+            <Tarjeta
+              empresa={{
+                name: "Interluz",
+                imagen: logoInterluz,
+              }}
+            />
+          </Link>
+          <Link to="/ies" className={styles.card}>
+            <Tarjeta 
+              empresa={{
+                name: "Instituto de Educación Superior 9-024",
+                imagen: logoIes,
+              }}
+            />
+          </Link>
           </div>
         </section>
 
