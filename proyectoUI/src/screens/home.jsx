@@ -167,34 +167,35 @@ function Home() {
           </Link>
           </div>
         </section>
-
-        {/* Team Section */}
+          
+          {/* Team Section */}
         <div id="team" className={styles.contentSectionA}>
-          <div>
-            <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
-            <h3 className={styles.sectionSubheading}>
-              Conoce a los expertos detrás de AuditaWeb Solutions
-            </h3>
-          </div>
-          <div className={styles.cardAlign}>
-            <Card
-              person={{
-                name: "Alejo Montuori",
-                description: "boquita",
-                imagen: imagenAl,
-                alt: "Foto de Alejo",
-              }}
-            />
-            <Card
-              person={{
-                name: "Belen Humbert",
-                description: "boquita",
-                imagen: imagenBel,
-                alt: "Foto de Belen",
-              }}
-            />
-          </div>
+        <div>
+        <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
+        <h3 className={styles.sectionSubheading}>
+          Conoce a los expertos detrás de AuditaWeb Solutions
+        </h3>
         </div>
+        <div className={styles.cardAlign}>
+        <Card
+          person={{
+            name: "Alejo Montuori",
+            description: `¡Hola! Soy Alejo Montuori, un profesional con experiencia en gestión de productos, desarrollo Full Stack y auditoría. Como Product Owner, me aseguro de que los productos digitales cumplan con las necesidades del cliente y los objetivos del negocio. Como Full Stack Developer, diseño aplicaciones robustas y escalables. Además, mi experiencia como Auditor me permite optimizar procesos y asegurar la calidad. Me apasiona crear soluciones tecnológicas que agreguen valor y mejoren la experiencia del usuario.`,
+            imagen: imagenAl,
+            alt: "Foto de Alejo",
+          }}
+        />
+        <Card
+          person={{
+            name: "Belén Humbert",
+            description: `¡Hola! Soy Belén Humbert, profesional en auditoría, QA, diseño UX/UI y metodologías ágiles como Scrum. Me especializo en garantizar la calidad de productos digitales, aplicando principios de usabilidad y diseño centrado en el usuario.
+            Como Auditora y QA, aseguro el cumplimiento de estándares y la detección de problemas. En diseño UX/UI, creo interfaces que mejoran la experiencia del usuario. Como Scrum Master, lidero equipos ágiles para alcanzar objetivos con eficiencia. Estoy comprometida con la excelencia y la calidad en cada proyecto.`,
+            imagen: imagenBel,
+            alt: "Foto de Belen",
+          }}
+        />
+      </div>
+    </div>    
 
         {/* Footer */}
         <footer id="footer" className={styles.footer}>
