@@ -298,7 +298,7 @@ const Ies = () => {
           {/* Tarjeta Análisis PEST */}
           <Grid item xs={12} sm={4}>
             <Card 
-              onClick={() => navigate("/pest")} 
+              onClick={() => navigate("/ies/pest")} 
               sx={{ 
                 cursor: "pointer", 
                 transition: "transform 0.3s ease-in-out", 
@@ -319,7 +319,7 @@ const Ies = () => {
           {/* Tarjeta Análisis 5 Fuerzas de Porter */}
           <Grid item xs={12} sm={4}>
             <Card 
-              onClick={() => navigate("/porter")} 
+              onClick={() => navigate("/ies/porter")} 
               sx={{ 
                 cursor: "pointer", 
                 transition: "transform 0.3s ease-in-out", 
