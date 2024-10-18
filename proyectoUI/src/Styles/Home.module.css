@@ -24,6 +24,11 @@ html {
   padding-bottom: 12%;
 }
 
+.sectionHeading {
+  font-family: 'Righteous'; 
+}
+
+
 /*Big header*/
 .introMessage > h1 {
   text-align: center;
@@ -60,8 +65,17 @@ html {
 }
 
 .sectionHeading {
-  color: #f45027; /*se queda*/
+  color: #f45027;
 }
+
+.contentSectionA .sectionHeading {
+  margin-bottom: 0.08em; /* Reduce el espacio debajo del subtítulo */
+}
+
+.contentSectionA .lead {
+  margin-top: 0; /* Elimina cualquier margen superior */
+}
+
 
 
 /* Portfolio section*/
