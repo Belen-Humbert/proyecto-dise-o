@@ -35,7 +35,7 @@ const Lila = () => {
 
       <div className={estilos.AboutLila} id="about">
         <div className={estilos.accordionWrapper}>
-          <h2 className={estilos.lilaTitle}>Sobre La Empresa</h2>
+          <h2 className={estilos.lilaTitle}>Sobre la Empresa</h2>
 
           {/* Accordion para Descripción de la Empresa */}
           <Accordion>

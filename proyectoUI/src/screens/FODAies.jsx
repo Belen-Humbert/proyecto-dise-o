@@ -65,11 +65,11 @@ El análisis FODA del Instituto de Educación Superior Nº 9-024 de Lavalle reve
                 variant="h4" 
                 className="fodaIes-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700 }}  // Color azul
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700, textAlign: 'center' }}  // Título centrado
               >
                 Fortalezas
               </Typography>
-              <Typography className="fodaIes-text" sx={{ color: '#666' }}>
+              <Typography className="fodaIes-text" sx={{ color: '#666', textAlign: 'left' }}>  {/* Texto alineado a la izquierda */}
                 - Vinculación con la comunidad local y otras instituciones educativas.
                 <br />
                 - La coexistencia con otras instituciones educativas en el CEIL permite mayor articulación.
@@ -105,11 +105,11 @@ El análisis FODA del Instituto de Educación Superior Nº 9-024 de Lavalle reve
                 variant="h4" 
                 className="fodaIes-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700 }}  // Color azul
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700, textAlign: 'center' }}  // Título centrado
               >
                 Oportunidades
               </Typography>
-              <Typography className="fodaIes-text" sx={{ color: '#666' }}>
+              <Typography className="fodaIes-text" sx={{ color: '#666', textAlign: 'left' }}>  {/* Texto alineado a la izquierda */}
                 - Articulación con entidades como la Municipalidad de Lavalle, INTA y UNCuyo.
                 <br />
                 - Ampliación de la oferta de formación continua para egresados mediante convenios con universidades.
@@ -143,11 +143,11 @@ El análisis FODA del Instituto de Educación Superior Nº 9-024 de Lavalle reve
                 variant="h4" 
                 className="fodaIes-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700 }}  // Color azul
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700, textAlign: 'center' }}  // Título centrado
               >
                 Debilidades
               </Typography>
-              <Typography className="fodaIes-text" sx={{ color: '#666' }}>
+              <Typography className="fodaIes-text" sx={{ color: '#666', textAlign: 'left' }}>  {/* Texto alineado a la izquierda */}
                 - Falta de integración de la información y autonomía administrativa.
                 <br />
                 - Dificultades en la implementación de nuevas normativas y cambios curriculares.
@@ -181,11 +181,11 @@ El análisis FODA del Instituto de Educación Superior Nº 9-024 de Lavalle reve
                 variant="h4" 
                 className="fodaIes-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700 }}  // Color azul
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#0073E6', fontWeight: 700, textAlign: 'center' }}  // Título centrado
               >
                 Amenazas
               </Typography>
-              <Typography className="fodaIes-text" sx={{ color: '#666' }}>
+              <Typography className="fodaIes-text" sx={{ color: '#666', textAlign: 'left' }}>  {/* Texto alineado a la izquierda */}
                 - Brecha entre propuestas curriculares y realidad socioeducativa.
                 <br />
                 - Resistencias dentro del equipo docente dificultando la integración de disciplinas.
@@ -197,7 +197,7 @@ El análisis FODA del Instituto de Educación Superior Nº 9-024 de Lavalle reve
 
       {/* Sección de la imagen */}
       <Box className={styles.fodaIesImageContainer} display="flex" justifyContent="center" marginTop="50px">
-        <img src={FodaImage} alt="Ies Software" className={styles.fodaIesImage} />
+        <img src={FodaImage} alt="Ies Software" className={styles.fodaIesImage} style={{ maxWidth: '100%', height: 'auto' }} />
       </Box>
     </Container>
   );

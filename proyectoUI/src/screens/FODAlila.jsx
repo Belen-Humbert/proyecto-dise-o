@@ -31,7 +31,7 @@ const FODAlila = () => {
           margin: '0 auto', 
           textAlign: 'center',
           display: 'block'
-        }} // Forzamos los estilos con sx
+        }}
       >
         El análisis FODA de Lila Software Studio revela una empresa con claras fortalezas en su enfoque personalizado y su capacidad para generar productos de alta calidad. Uno de sus principales puntos fuertes es su modelo de trabajo basado en la empatía y la creatividad, lo que permite generar soluciones innovadoras y personalizadas para cada cliente. Además, la empresa se caracteriza por su cercanía con los clientes, lo que genera relaciones comerciales a largo plazo basadas en la confianza.
       </Typography>
@@ -64,11 +64,14 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700, textAlign: 'center' }}
               >
                 Fortalezas
               </Typography>
-              <Typography className="fodaLila-text">
+              <Typography 
+                className="fodaLila-text"
+                sx={{ textAlign: 'left' }} 
+              >
                 - Enfoque personalizado y soluciones innovadoras.
                 <br />
                 - Cercanía con los clientes, generando relaciones a largo plazo.
@@ -79,7 +82,7 @@ const FODAlila = () => {
           </Paper>
         </Grid>
 
-        {/* Repite lo mismo para las otras tarjetas */}
+        {/* Debilidades */}
         <Grid item xs={12} sm={6}>
           <Paper 
             elevation={3} 
@@ -104,11 +107,14 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700, textAlign: 'center' }}
               >
                 Debilidades
               </Typography>
-              <Typography className="fodaLila-text">
+              <Typography 
+                className="fodaLila-text"
+                sx={{ textAlign: 'left' }} 
+              >
                 - Dependencia de plataformas externas como Notion y Figma.
                 <br />
                 - Enfoque en contratar talento local, lo que limita la capacidad de expansión.
@@ -142,11 +148,14 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700, textAlign: 'center' }}
               >
                 Oportunidades
               </Typography>
-              <Typography className="fodaLila-text">
+              <Typography 
+                className="fodaLila-text"
+                sx={{ textAlign: 'left' }}
+              >
                 - Creciente demanda de soluciones tecnológicas innovadoras.
                 <br />
                 - Visión de internacionalización, lo que abre nuevas puertas para expandir el mercado más allá de Argentina.
@@ -180,11 +189,14 @@ const FODAlila = () => {
                 variant="h4" 
                 className="fodaLila-subtitle"
                 gutterBottom
-                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700 }}
+                sx={{ fontFamily: 'Poppins, sans-serif', color: '#c1a6cf', fontWeight: 700, textAlign: 'center' }}
               >
                 Amenazas
               </Typography>
-              <Typography className="fodaLila-text">
+              <Typography 
+                className="fodaLila-text"
+                sx={{ textAlign: 'left' }} 
+              >
                 - Inestabilidad económica y política en Argentina.
                 <br />
                 - Adopción de plataformas low-code/no-code, lo que podría reducir la demanda de software a medida.

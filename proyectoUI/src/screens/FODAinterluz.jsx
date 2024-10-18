@@ -65,17 +65,18 @@ const FODAinterluz = () => {
                 className="FODAinterluz-subtitle"
                 gutterBottom
                 sx={{ fontFamily: 'Poppins, sans-serif', color: '#68B649', fontWeight: 700 }}
+                align="center"
               >
                 Fortalezas
               </Typography>
-              <Typography className="FODAinterluz-text">
-                - Cobertura Exclusiva de Fibra Óptica en Zonas Rurales: Interluz es la única empresa en muchas áreas rurales de Lavalle que ofrece servicios de internet mediante fibra óptica, lo cual le otorga una ventaja competitiva importante frente a competidores que solo cuentan con opciones satelitales.
+              <Typography className="FODAinterluz-text" sx={{ textAlign: 'left' }}>
+                - Cobertura Exclusiva de Fibra Óptica en Zonas Rurales.
                 <br />
-                - Calidad de Servicio y Estabilidad de Conexión: La fibra óptica permite una conexión más estable y con velocidades más altas en comparación con el internet satelital, lo que mejora la experiencia del cliente.
+                - Calidad de Servicio y Estabilidad de Conexión.
                 <br />
-                - Apoyo del Municipio: Al ser una empresa creada por el municipio, Interluz cuenta con el respaldo y la confianza de la comunidad local, lo cual facilita la penetración de mercado y la aceptación del servicio.
+                - Apoyo del Municipio.
                 <br />
-                - Capacidad de Expansión: La infraestructura de fibra óptica, una vez instalada, puede ampliarse relativamente fácil para cubrir nuevas áreas, lo que le permite a Interluz crecer rápidamente dentro de su región objetivo.
+                - Capacidad de Expansión.
               </Typography>
             </Box>
           </Paper>
@@ -107,17 +108,18 @@ const FODAinterluz = () => {
                 className="FODAinterluz-subtitle"
                 gutterBottom
                 sx={{ fontFamily: 'Poppins, sans-serif', color: '#68B649', fontWeight: 700 }}
+                align="center"
               >
                 Debilidades
               </Typography>
-              <Typography className="FODAinterluz-text">
-                - Dependencia de Inversiones en Infraestructura: La instalación y mantenimiento de la red de fibra óptica es costosa, lo que significa que Interluz depende de una inversión continua para mantener y expandir su infraestructura.
+              <Typography className="FODAinterluz-text" sx={{ textAlign: 'left' }}>
+                - Dependencia de Inversiones en Infraestructura.
                 <br />
-                - Cobertura Limitada: Aunque Interluz tiene una ventaja en las áreas donde ofrece fibra óptica, todavía existen zonas rurales sin cobertura, lo que puede limitar el alcance de su mercado.
+                - Cobertura Limitada.
                 <br />
-                - Escasez de Recursos Técnicos Especializados: El mantenimiento y expansión de la red de fibra óptica requieren personal técnico especializado, que puede ser difícil de encontrar y retener en áreas rurales.
+                - Escasez de Recursos Técnicos Especializados.
                 <br />
-                - Escala de Operaciones Reducida: En comparación con grandes empresas de telecomunicaciones, Interluz tiene recursos limitados y una operación en menor escala, lo que podría dificultar competir en mercados más amplios.
+                - Escala de Operaciones Reducida.
               </Typography>
             </Box>
           </Paper>
@@ -149,17 +151,18 @@ const FODAinterluz = () => {
                 className="FODAinterluz-subtitle"
                 gutterBottom
                 sx={{ fontFamily: 'Poppins, sans-serif', color: '#68B649', fontWeight: 700 }}
+                align="center"
               >
                 Oportunidades
               </Typography>
-              <Typography className="FODAinterluz-text">
-                - Avances Tecnológicos: La constante evolución de la tecnología de fibra óptica abre la puerta para mejorar la eficiencia y reducir los costos operativos, permitiendo que Interluz se mantenga competitivo.
+              <Typography className="FODAinterluz-text" sx={{ textAlign: 'left' }}>
+                - Avances Tecnológicos
                 <br />
-                - Aumento de la Demanda de Conectividad en Áreas Rurales: La creciente digitalización de servicios, como la educación y el trabajo remoto, aumenta la demanda de conectividad de alta calidad en áreas donde Interluz opera.
+                - Aumento de la Demanda de Conectividad en Áreas Rurales.
                 <br />
-                - Posibles Subsidios o Apoyos del Gobierno: Existen oportunidades de obtener financiamiento o subsidios del gobierno para proyectos de inclusión digital en zonas rurales, lo cual podría reducir costos y aumentar la capacidad de expansión.
+                - Posibles Subsidios o Apoyos del Gobierno.
                 <br />
-                - Expansión a Nuevos Mercados: Interluz tiene la oportunidad de expandirse a otros departamentos de Mendoza o incluso a provincias vecinas que presentan desafíos similares de conectividad.
+                - Expansión a Nuevos Mercados.
               </Typography>
             </Box>
           </Paper>
@@ -191,17 +194,18 @@ const FODAinterluz = () => {
                 className="FODAinterluz-subtitle"
                 gutterBottom
                 sx={{ fontFamily: 'Poppins, sans-serif', color: '#68B649', fontWeight: 700 }}
+                align="center"
               >
                 Amenazas
               </Typography>
-              <Typography className="FODAinterluz-text">
-                - Competencia con Proveedores de Internet Satelital: Empresas como Tachicom y Micom que ofrecen internet satelital podrían expandir sus servicios o mejorar su tecnología, representando una competencia directa.
+              <Typography className="FODAinterluz-text" sx={{ textAlign: 'left' }}>
+                - Competencia con Proveedores de Internet Satelital.
                 <br />
-                - Regulación Gubernamental: Cambios en la normativa que regula las telecomunicaciones y la infraestructura de internet podrían aumentar los costos operativos o imponer limitaciones al crecimiento de Interluz.
+                - Regulación Gubernamental.
                 <br />
-                - Avances en Tecnología Satelital: Si la tecnología de internet satelital mejora significativamente en términos de velocidad y costo, podría convertirse en una alternativa más viable para las zonas rurales, disminuyendo la ventaja competitiva de Interluz.
+                - Avances en Tecnología Satelital.
                 <br />
-                - Dependencia de Factores Económicos: La expansión y el mantenimiento de la infraestructura requieren una inversión continua, y factores como la inflación o la devaluación podrían afectar la capacidad de la empresa para financiar estas necesidades.
+                - Dependencia de Factores Económicos.
               </Typography>
             </Box>
           </Paper>
