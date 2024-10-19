@@ -199,47 +199,56 @@ function Home() {
 
         {/* Footer */}
         <footer id="footer" className={styles.footer}>
-          <div className={styles.footerContainer}>
-            <div className={styles.footerLeft}>
-              <h2>AuditaWeb Solutions</h2>
-            </div>
-            <div className={styles.footerCenter}>
-              <ul className={styles.footerMenu}>
-                <li>About</li>
-                <li>Inicio</li>
-                <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
-                  Contacto
-                </li>
-                <li>Auditorías</li>
-              </ul>
-              <p>© 2024 AWS. All rights reserved.</p>
-            </div>
-            <div className={styles.footerRight}>
-              <ul className={styles.footerSocials}>
-                <li>
-                  <a href="https://www.facebook.com/sebastian.montuori.1">
-                    <FacebookIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://x.com/">
-                    <XIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <InstagramIcon />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/bel%C3%A9n-humbert/">
-                    <LinkedInIcon />
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className={styles.footerContainer}>
+        <div className={styles.footerLeft}>
+        <h2>AuditaWeb Solutions</h2>
+        </div>
+        <div className={styles.footerCenter}>
+        <ul className={styles.footerMenu}>
+        {/* Agregar enlaces ancla */}
+        <li>
+          <a href="#about" className={styles.footerLink}>
+            Sobre Nosotros
+          </a>
+        </li>
+        <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
+          Contacto
+        </li>
+        <li>
+          <a href="#portfolio" className={styles.footerLink}>
+            Auditorías
+          </a>
+        </li>
+        </ul>
+        <p>© 2024 AWS. All rights reserved.</p>
+        </div>
+        <div className={styles.footerRight}>
+          <ul className={styles.footerSocials}>
+          <li>
+          <a href="https://www.facebook.com/sebastian.montuori.1">
+            <FacebookIcon />
+          </a>
+          </li>
+          <li>
+          <a href="https://x.com/">
+            <XIcon />
+          </a>
+          </li>
+          <li>
+          <a href="https://www.instagram.com/">
+            <InstagramIcon />
+          </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/bel%C3%A9n-humbert/">
+            <LinkedInIcon />
+          </a>
+          </li>
+          </ul>
           </div>
-        </footer>
+        </div>
+      </footer>
+
 
         {/* Modal de Contacto */}
         <Modal open={openModal} onClose={handleCloseModal}>

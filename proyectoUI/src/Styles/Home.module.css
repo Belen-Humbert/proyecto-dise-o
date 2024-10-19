@@ -125,12 +125,13 @@ html {
   right: 0;
   height: 100%;
   width: 1px;
-  background-color: #141517; /* Color de la línea */
+  background-color: #141517;
 }
 
 .footerCenter {
   text-align: center;
 }
+
 .footerCenter > p {
   color: #141517;
 }
@@ -145,6 +146,14 @@ html {
 .footerMenu li {
   margin: 0 10px;
   cursor: pointer;
+  color: #141517;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y zoom */
+}
+
+/* Hover con zoom en los ítems del menú */
+.footerMenu li:hover {
+  color: rgba(20, 21, 23, 0.341);
+  transform: scale(1.1); /* Efecto de zoom */
 }
 
 .footerRight {
@@ -161,6 +170,13 @@ html {
 .footerSocials li {
   margin: 0 10px;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y zoom */
+}
+
+/* Hover con zoom en los íconos sociales */
+.footerSocials li:hover {
+  color: rgba(20, 21, 23, 0.341);
+  transform: scale(1.1); /* Efecto de zoom */
 }
 
 .footerSocials a {
@@ -169,6 +185,12 @@ html {
 
 .footerSocials a:hover {
   color: inherit;
+}
+
+/* Estilos para enlaces en el footer */
+.footerLink {
+  text-decoration: none;  /* Elimina el subrayado */
+  color: inherit;         /* Hereda el color del elemento padre, o puedes especificar un color */
 }
 
 /* Navigation */
