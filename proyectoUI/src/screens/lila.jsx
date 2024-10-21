@@ -19,7 +19,7 @@ const Lila = () => {
 
   return (
     <>
-      <Nav /> 
+      <Nav estilo = "lilaStyle" /> 
       <div className={estilos.HomeLila} id="home">
         <h2 className={estilos.lilaTitle}>Conocenos</h2>
         <div className={estilos.logoContainer}>

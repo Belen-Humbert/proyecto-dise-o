@@ -1,0 +1,36 @@
+.navAll {
+  background-color: #c1a6cf;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px #c1a6cf;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarMenu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarItem {
+  position: relative;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: #0000007f;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.navbarLink:hover {
+  background-color: rgba(20, 21, 23, 0.23);
+}

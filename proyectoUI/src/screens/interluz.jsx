@@ -19,7 +19,7 @@ const Interluz = () => {
 
   return (
     <>
-      <Nav /> 
+      <Nav estilo = "InterluzStyle" /> 
       <div className={estilos.HomeInterluz} id="home">
         <h2 className={estilos.interluzTitle}>Conocenos</h2>
         <div className={estilos.logoContainer}>

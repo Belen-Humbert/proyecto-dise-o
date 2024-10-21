@@ -62,7 +62,7 @@ const Ies = () => {
 
   return (
     <>
-      <Nav />
+      <Nav estilo = "IesStyle"/>
       <div className="HomeIes" id="home">
         <h2 className="ies-title h2-ies">Conócenos</h2>
         <div className="logo-container">
@@ -253,7 +253,7 @@ const Ies = () => {
       </div>
 
 
-  <div className="OrganigramaIes" id="organigramaIes">
+  <div className="OrganigramaIes" id="organigrama">
   <h2 className="iesTitle">Organigrama</h2>
   <div className="imgRow">
     <div className="imgContainer">
