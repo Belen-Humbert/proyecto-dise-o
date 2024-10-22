@@ -275,3 +275,26 @@ html {
     height: 300px; /* Altura más pequeña en pantallas pequeñas */
   }
 }
+
+/* Estilo del botón Regístrate similar al nav */
+.registerButton {
+  background-color: #f45027;
+  color: #141517;
+  padding: 10px 30px;
+  margin: -6px auto;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2em;
+  box-shadow: 0 4px 15px #e76a3e;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 30px; /* Ajusta la altura para alinearlo con el nav */
+  right: 30px; /* Alineado a la derecha */
+}
+
+.registerButton:hover {
+  color: rgba(20, 21, 23, 0.341);
+  transform: scale(1.1); /* Efecto de zoom */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y zoom */
+}

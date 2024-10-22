@@ -21,7 +21,7 @@ import logoLila from "../assets/imagenes/logoLila.png";
 import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
 import imagenAl from "../assets/imagenes/alejo.jpeg";
 import imagenBel from "../assets/imagenes/belen.jpg";
-import Tarjeta from "../components/tarjeta"
+import Tarjeta from "../components/tarjeta";
 
 function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -97,7 +97,9 @@ function Home() {
               </a>
             </li>
           </ul>
+        <button className={styles.registerButton}>Regístrate</button>
         </nav>
+
 
         {/* Header */}
         <div id="home">
@@ -141,115 +143,129 @@ function Home() {
             <h2 className={styles.sectionHeading}>Auditorías Realizadas</h2>
           </div>
           <div className={styles.cardAlign}>
-      
-          <Link to="/lila" className={styles.card} >
-            <Tarjeta
-              empresa={{
-                name: "Lila Software Studio",
-                imagen:logoLila
-              }}
-            />
-          </Link>
-          <Link to="/interluz" className={styles.card}>
-            <Tarjeta
-              empresa={{
-                name: "Interluz",
-                imagen: logoInterluz,
-              }}
-            />
-          </Link>
-          <Link to="/ies" className={styles.card}>
-            <Tarjeta 
-              empresa={{
-                name: "Instituto de Educación Superior 9-024",
-                imagen: logoIes,
-              }}
-            />
-          </Link>
+            <Link to="/lila" className={styles.card}>
+              <Tarjeta
+                empresa={{
+                  name: "Lila Software Studio",
+                  imagen: logoLila,
+                }}
+              />
+            </Link>
+            <Link to="/interluz" className={styles.card}>
+              <Tarjeta
+                empresa={{
+                  name: "Interluz",
+                  imagen: logoInterluz,
+                }}
+              />
+            </Link>
+            <Link to="/ies" className={styles.card}>
+              <Tarjeta
+                empresa={{
+                  name: "Instituto de Educación Superior 9-024",
+                  imagen: logoIes,
+                }}
+              />
+            </Link>
           </div>
         </section>
-          
-          {/* Team Section */}
+
+        {/* Team Section */}
         <div id="team" className={styles.contentSectionA}>
-        <div>
-        <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
-        <h3 className={styles.sectionSubheading}>
-          Conoce a los expertos detrás de AuditaWeb Solutions
-        </h3>
-        </div>
-        <div className={styles.cardAlign}>
-        <Card
-          person={{
-            name: "Alejo Montuori",
-            description: `¡Hola! Soy Alejo Montuori, un profesional con experiencia en gestión de productos, desarrollo Full Stack y auditoría. Como Product Owner, me aseguro de que los productos digitales cumplan con las necesidades del cliente y los objetivos del negocio. Como Full Stack Developer, diseño aplicaciones robustas y escalables. Además, mi experiencia como Auditor me permite optimizar procesos y asegurar la calidad. Me apasiona crear soluciones tecnológicas que agreguen valor y mejoren la experiencia del usuario.`,
-            imagen: imagenAl,
-            alt: "Foto de Alejo",
-          }}
-        />
-        <Card
-          person={{
-            name: "Belén Humbert",
-            description: `¡Hola! Soy Belén Humbert, profesional en auditoría, QA, diseño UX/UI y metodologías ágiles como Scrum. Me especializo en garantizar la calidad de productos digitales, aplicando principios de usabilidad y diseño centrado en el usuario.
+          <div>
+            <h2 className={styles.sectionHeading}>Nuestro Equipo</h2>
+            <h3 className={styles.sectionSubheading}>
+              Conoce a los expertos detrás de AuditaWeb Solutions
+            </h3>
+          </div>
+          <div className={styles.cardAlign}>
+            <Card
+              person={{
+                name: "Alejo Montuori",
+                description: `¡Hola! Soy Alejo Montuori, un profesional con experiencia en gestión de productos, desarrollo Full Stack y auditoría. Como Product Owner, me aseguro de que los productos digitales cumplan con las necesidades del cliente y los objetivos del negocio. Como Full Stack Developer, diseño aplicaciones robustas y escalables. Además, mi experiencia como Auditor me permite optimizar procesos y asegurar la calidad. Me apasiona crear soluciones tecnológicas que agreguen valor y mejoren la experiencia del usuario.`,
+                imagen: imagenAl,
+                alt: "Foto de Alejo",
+              }}
+            />
+            <Card
+              person={{
+                name: "Belén Humbert",
+                description: `¡Hola! Soy Belén Humbert, profesional en auditoría, QA, diseño UX/UI y metodologías ágiles como Scrum. Me especializo en garantizar la calidad de productos digitales, aplicando principios de usabilidad y diseño centrado en el usuario.
             Como Auditora y QA, aseguro el cumplimiento de estándares y la detección de problemas. En diseño UX/UI, creo interfaces que mejoran la experiencia del usuario. Como Scrum Master, lidero equipos ágiles para alcanzar objetivos con eficiencia. Estoy comprometida con la excelencia y la calidad en cada proyecto.`,
-            imagen: imagenBel,
-            alt: "Foto de Belen",
-          }}
-        />
-      </div>
-    </div>    
+                imagen: imagenBel,
+                alt: "Foto de Belen",
+              }}
+            />
+          </div>
+        </div>
 
-{/* Footer */}
-<footer id="footer" className={styles.footer}>
-  <div className={styles.footerContainer}>
-    <div className={styles.footerLeft}>
-      <h2>AuditaWeb Solutions</h2>
-    </div>
-    <div className={styles.footerCenter}>
-      <ul className={styles.footerMenu}>
-        {/* Agregar enlaces ancla */}
-        <li>
-          <a href="#about" className={styles.footerLink}>
-            Sobre Nosotros
-          </a>
-        </li>
-        <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
-          Contacto
-        </li>
-        <li>
-          <a href="#portfolio" className={styles.footerLink}>
-            Auditorías
-          </a>
-        </li>
-      </ul>
-      <p>© 2024 AWS</p>
-    </div>
-    <div className={styles.footerRight}>
-      <ul className={styles.footerSocials}>
-        <li>
-          <a href="https://www.facebook.com/sebastian.montuori.1" target="_blank" rel="noopener noreferrer">
-            <FacebookIcon />
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/belhumbert" target="_blank" rel="noopener noreferrer">
-            <XIcon />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/bel_humbert/" target="_blank" rel="noopener noreferrer">
-            <InstagramIcon />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/bel%C3%A9n-humbert/" target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon />
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
+        {/* Footer */}
+        <footer id="footer" className={styles.footer}>
+          <div className={styles.footerContainer}>
+            <div className={styles.footerLeft}>
+              <h2>AuditaWeb Solutions</h2>
+            </div>
+            <div className={styles.footerCenter}>
+              <ul className={styles.footerMenu}>
+                {/* Agregar enlaces ancla */}
+                <li>
+                  <a href="#about" className={styles.footerLink}>
+                    Sobre Nosotros
+                  </a>
+                </li>
+                <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
+                  Contacto
+                </li>
+                <li>
+                  <a href="#portfolio" className={styles.footerLink}>
+                    Auditorías
+                  </a>
+                </li>
+              </ul>
+              <p>© 2024 AWS</p>
+            </div>
+            <div className={styles.footerRight}>
+              <ul className={styles.footerSocials}>
+                <li>
+                  <a
+                    href="https://www.facebook.com/sebastian.montuori.1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FacebookIcon />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/belhumbert"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <XIcon />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/bel_humbert/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InstagramIcon />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/bel%C3%A9n-humbert/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
 
         {/* Modal de Contacto */}
         <Modal open={openModal} onClose={handleCloseModal}>
