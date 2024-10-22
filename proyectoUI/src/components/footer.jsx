@@ -16,7 +16,7 @@ const Footer = ({ estilos, empresas }) => {
   const estiloActual = EstiloF[estilos] || {};
 
   const footer = `${estiloActual.footer || ""}`;
-  const footerContai = `${estiloActual.footerContainer || ""} `;
+  const footerContai = `${estiloActual.footerContainer || ""}`;
   const footerLe = `${estiloActual.footerLeft || ""} ${
     estiloActual.footerLefth2 || ""
   } ${estiloActual.footerLeftafter || ""}`;
@@ -34,24 +34,24 @@ const Footer = ({ estilos, empresas }) => {
         </div>
         <div className={footerCe}>
           <div className={footerIc}>
-            <a href={empresas.facebook}>
+            <a href={empresas.facebook} target="_blank" rel="noopener noreferrer">
               <FacebookIcon className={iconStyle} />
             </a>
-            <a href={empresas.instagram}>
+            <a href={empresas.instagram} target="_blank" rel="noopener noreferrer">
               <InstagramIcon className={iconStyle} />
             </a>
-            <a href={empresas.maps}>
+            <a href={empresas.maps} target="_blank" rel="noopener noreferrer">
               <LocationOnIcon className={iconStyle} />
             </a>
-            <a href={empresas.web}>
+            <a href={empresas.web} target="_blank" rel="noopener noreferrer">
               <TabIcon className={iconStyle} />
             </a>
           </div>
-
-          <p>© 2024 AWS. All rights reserved.</p>
+          <p>© 2024 AWS</p>
         </div>
       </div>
     </div>
   );
 };
+
 export default Footer;

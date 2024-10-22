@@ -84,25 +84,25 @@ const Ies = () => {
       <div className="carreras-section" id="carreras">
         <h2 className="ies-title h2-ies">Carreras Disponibles</h2>
         <Grid container spacing={2} justifyContent="center">
-          {carreras.map((carrera, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card
-                sx={{ minHeight: 120 }}
-                onClick={() => (window.location.href = carrera.url)}
-              >
-                <CardContent>
-                  <Typography
-                    variant="body1"
-                    component="div"
-                    sx={{ fontWeight: "bold", fontSize: "0.95rem" }}
-                  >
-                    {carrera.nombre} {/* Cambiado a carrera.nombre */}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+  {carreras.map((carrera, index) => (
+    <Grid item xs={12} sm={6} md={3} key={index}>
+      <Card
+        sx={{ minHeight: 120 }}
+        onClick={() => window.open(carrera.url, "_blank")} 
+      >
+        <CardContent>
+          <Typography
+            variant="body1"
+            component="div"
+            sx={{ fontWeight: "bold", fontSize: "0.95rem" }}
+          >
+            {carrera.nombre} 
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
+  ))}
+</Grid>
       </div>
 
       {/* Sección del acordeón */}

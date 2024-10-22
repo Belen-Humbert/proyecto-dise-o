@@ -198,14 +198,14 @@ function Home() {
       </div>
     </div>    
 
-        {/* Footer */}
-        <footer id="footer" className={styles.footer}>
-        <div className={styles.footerContainer}>
-        <div className={styles.footerLeft}>
-        <h2>AuditaWeb Solutions</h2>
-        </div>
-        <div className={styles.footerCenter}>
-        <ul className={styles.footerMenu}>
+{/* Footer */}
+<footer id="footer" className={styles.footer}>
+  <div className={styles.footerContainer}>
+    <div className={styles.footerLeft}>
+      <h2>AuditaWeb Solutions</h2>
+    </div>
+    <div className={styles.footerCenter}>
+      <ul className={styles.footerMenu}>
         {/* Agregar enlaces ancla */}
         <li>
           <a href="#about" className={styles.footerLink}>
@@ -220,35 +220,35 @@ function Home() {
             Auditorías
           </a>
         </li>
-        </ul>
-        <p>© 2024 AWS. All rights reserved.</p>
-        </div>
-        <div className={styles.footerRight}>
-          <ul className={styles.footerSocials}>
-          <li>
-          <a href="https://www.facebook.com/sebastian.montuori.1">
+      </ul>
+      <p>© 2024 AWS</p>
+    </div>
+    <div className={styles.footerRight}>
+      <ul className={styles.footerSocials}>
+        <li>
+          <a href="https://www.facebook.com/sebastian.montuori.1" target="_blank" rel="noopener noreferrer">
             <FacebookIcon />
           </a>
-          </li>
-          <li>
-          <a href="https://x.com/">
+        </li>
+        <li>
+          <a href="https://x.com/belhumbert" target="_blank" rel="noopener noreferrer">
             <XIcon />
           </a>
-          </li>
-          <li>
-          <a href="https://www.instagram.com/">
+        </li>
+        <li>
+          <a href="https://www.instagram.com/bel_humbert/" target="_blank" rel="noopener noreferrer">
             <InstagramIcon />
           </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/bel%C3%A9n-humbert/">
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/bel%C3%A9n-humbert/" target="_blank" rel="noopener noreferrer">
             <LinkedInIcon />
           </a>
-          </li>
-          </ul>
-          </div>
-        </div>
-      </footer>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
 
         {/* Modal de Contacto */}
