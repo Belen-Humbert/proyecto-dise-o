@@ -22,6 +22,7 @@ import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
 import imagenAl from "../assets/imagenes/alejo.jpeg";
 import imagenBel from "../assets/imagenes/belen.jpg";
 import Tarjeta from "../components/tarjeta"
+
 function Home() {
   const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({
