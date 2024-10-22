@@ -76,11 +76,6 @@ function Home() {
         {/* Navigation */}
         <nav className={styles.navbar}>
           <ul className={styles.navbarMenu}>
-            <li className={`${styles.navbarItem} ${styles.active}`}>
-              <a href="#about" className={styles.navbarLink}>
-                Sobre Nosotros
-              </a>
-            </li>
             <li className={styles.navbarItem}>
               <a href="#portfolio" className={styles.navbarLink}>
                 Auditorías Realizadas
