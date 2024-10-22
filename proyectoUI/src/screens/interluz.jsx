@@ -342,8 +342,16 @@ const Interluz = () => {
         </Grid>
       </div>
 
-       <Footer estilos="footerInterluz"  empresas={{nombre: "Interluz"}}/>       
-
+      <Footer
+        estilos="footerInterluz"
+        empresas={{
+          nombre: "Interluz",
+          facebook:"https://www.facebook.com/profile.php?id=100045247034753&mibextid=ZbWKwL",
+          instagram:"https://www.instagram.com/interluzinternetparacrecer?igsh=ajR5eDYwdjVpempt",
+          web: "https://interluz.com.ar/",
+          maps: "https://maps.app.goo.gl/nsSY6tVxHd12iSUeA",
+        }}
+      />
     </>
   );
 };

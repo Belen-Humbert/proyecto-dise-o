@@ -285,8 +285,16 @@ const Lila = () => {
         </Grid>
       </div>
 
-       <Footer estilos = "footerLila"  empresas={{nombre: "Lila Software Studio"}}/>       
-
+      <Footer
+        estilos="footerLila"
+        empresas={{
+          nombre: "Lila Software Studio",
+          facebook:"https://www.facebook.com/share/GZtuGqhBPfbcdPUa/",
+          instagram:"https://www.instagram.com/lila.software.studio?igsh=MWVzYXNzYmpnMng0Zg==",
+          web: "https://lila.com.ar/home",
+          maps: "https://maps.app.goo.gl/d4Yq6JKN19nUM1q38",
+        }}
+      />
     </>
   );
 };

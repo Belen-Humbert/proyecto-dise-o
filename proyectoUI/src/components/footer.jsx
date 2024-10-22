@@ -32,16 +32,24 @@ const Footer = ({ estilos, empresas }) => {
         <div className={footerLe}>
           <h2>{empresas.nombre}</h2>
         </div>
-       <div className={footerCe}> 
-        <div className={footerIc}>
-            <FacebookIcon className={iconStyle} />
-            <InstagramIcon className={iconStyle} />
-            <LocationOnIcon className={iconStyle} />
-            <TabIcon className={iconStyle} />
+        <div className={footerCe}>
+          <div className={footerIc}>
+            <a href={empresas.facebook}>
+              <FacebookIcon className={iconStyle} />
+            </a>
+            <a href={empresas.instagram}>
+              <InstagramIcon className={iconStyle} />
+            </a>
+            <a href={empresas.maps}>
+              <LocationOnIcon className={iconStyle} />
+            </a>
+            <a href={empresas.web}>
+              <TabIcon className={iconStyle} />
+            </a>
           </div>
-        
+
           <p>© 2024 AWS. All rights reserved.</p>
-          </div>
+        </div>
       </div>
     </div>
   );

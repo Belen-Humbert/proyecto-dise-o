@@ -13,7 +13,7 @@ import organigramaIes from "../assets/imagenes/ORGANIGRAMAies.png";
 import TICies from "../assets/imagenes/TICies.png";
 import logoIes from "../assets/imagenes/logoIes-removebg-preview.png";
 import "../Styles/ies.css";
-import Footer from "../components/footer.jsx"
+import Footer from "../components/footer.jsx";
 
 const carreras = [
   {
@@ -400,9 +400,16 @@ const Ies = () => {
         </Grid>
       </div>
 
-       <Footer estilos="footerIes" empresas={{nombre: "IES 9-024 Lavalle", 
-         }}/>       
-
+      <Footer
+        estilos="footerIes"
+        empresas={{
+          nombre: "IES 9-024 Lavalle",
+          facebook:"https://www.facebook.com/profile.php?id=100042340345697&mibextid=ZbWKwL",
+          instagram: "https://www.instagram.com/ies9_024lavalle?igsh=d3BhNXV5ZGc4NTYy",
+          web:"https://ies9024-infd.mendoza.edu.ar/sitio/",
+          maps:"https://maps.app.goo.gl/q7t36AwD1xFbteJE9"
+        }}
+      />
     </>
   );
 };
