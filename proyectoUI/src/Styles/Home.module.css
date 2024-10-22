@@ -20,8 +20,8 @@ html {
 
 .introMessage {
   position: relative;
-  padding-top: 12%;
-  padding-bottom: 12%;
+  margin-top: 12%;
+  margin-bottom: 4%;
 }
 
 .sectionHeading {
@@ -29,10 +29,12 @@ html {
 }
 
 
+
 /*Big header*/
 .introMessage > h1 {
   text-align: center;
   margin-top: -50px;
+  margin-bottom: -1px;
   font-size: 5em; /* Tamaño base del texto */
   color: #ff4500; /* Color naranja para todo el texto */
   font-family: "Righteous";
@@ -42,6 +44,8 @@ html {
 .introMessage > h3 {
   text-align: center;
   color: #ed7226;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 
 /*section 2*/
@@ -62,10 +66,13 @@ html {
 .lead {
   text-align: left;
   color: #aba7a6;
+  margin:-1px;
+  font-size: 0.9em;
 }
 
 .sectionHeading {
   color: #f45027;
+  margin: -1px;
 }
 
 .contentSectionA .sectionHeading {

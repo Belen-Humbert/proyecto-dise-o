@@ -121,7 +121,7 @@ function Home() {
             <div>
               <h2 className={styles.sectionHeading}>Sobre Nosotros</h2>
               <br />
-              <p className={styles.lead}>
+              <div className={styles.lead}>
                 En AuditaWeb Solutions, somos especialistas en brindar
                 soluciones integrales a empresas que buscan optimizar su
                 funcionamiento y expandir su presencia en el mundo digital.
@@ -132,7 +132,7 @@ function Home() {
                 y te conectan con tus clientes de manera efectiva. Con nuestro
                 enfoque multidisciplinario, ayudamos a las empresas a crecer de
                 manera segura y confiable, asegurando su éxito en el mercado.
-              </p>
+              </div>
             </div>
           </div>
         </div>
