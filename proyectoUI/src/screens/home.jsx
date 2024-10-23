@@ -80,12 +80,43 @@ function Home() {
     setRegisterData({ ...registerData, [name]: value });
   };
 
-  const handleRegisterSubmit = (e) => {
+  const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos de registro enviados:", registerData);
-    // Aquí puedes integrar el servicio de registro
-    handleCloseModalRegister();
+  
+    // Validar campos
+    if (!registerData.name || !registerData.lastName || !registerData.email || !registerData.city) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+  
+    try {
+      const response = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: registerData.name,
+          lastName: registerData.lastName,
+          email: registerData.email,
+          city: registerData.city,
+        }),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error en el registro');
+      }
+  
+      const data = await response.json();
+      console.log(data.message); // Muestra el mensaje de éxito en la consola
+      alert("Registro exitoso!"); // Mensaje al usuario
+      handleCloseModalRegister(); // Cierra el modal tras un registro exitoso
+    } catch (error) {
+      console.error('Error en el registro:', error.message);
+      alert("Hubo un problema al registrarte. Intenta nuevamente.");
+    }
   };
+  
 
   return (
     <>
