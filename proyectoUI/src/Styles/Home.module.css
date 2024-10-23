@@ -305,3 +305,45 @@ html {
   transform: scale(1.1); /* Efecto de zoom */
   transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y zoom */
 }
+
+/* Estilos para el Modal de Contacto */
+.modalContact {
+  background-color: #282a2e;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.modalContact .MuiTextField-root {
+  margin-bottom: 16px;
+  background-color: #1f2226;
+}
+
+.modalContact .MuiInputLabel-root {
+  color: #fff;
+}
+
+.modalContact .MuiButton-root {
+  background-color: #f45027;
+  color: #fff;
+}
+
+.modalContact .MuiButton-root:hover {
+  background-color: #f45027;
+}
+
+/* Estilos para el Modal de Registro */
+.modalRegister {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.modalRegister .MuiTextField-root {
+  margin-bottom: 16px;
+}
+
+.modalRegister .MuiButton-root {
+  background-color: #f45027;
+  color: #fff;
+}

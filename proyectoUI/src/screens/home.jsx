@@ -10,7 +10,6 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "emailjs-com";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Card from "../components/card";
@@ -53,19 +52,39 @@ function Home() {
           telefono: formData.telefono,
           mensaje: formData.message,
         },
-        "MMqTd0iWg8ACYzgdK" // User ID (Clave pública)
+        "MMqTd0iWg8ACYzgdK" // User ID
       )
       .then((response) => {
-        console.log(
-          "Mensaje enviado con éxito!",
-          response.status,
-          response.text
-        );
+        console.log("Mensaje enviado con éxito!", response.status, response.text);
         handleCloseModal();
       })
       .catch((error) => {
         console.error("Hubo un error al enviar el mensaje:", error);
       });
+  };
+
+  const [registerData, setRegisterData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    city: "",
+  });
+
+  const [openModalRegister, setOpenModalRegister] = useState(false);
+
+  const handleOpenModalRegister = () => setOpenModalRegister(true);
+  const handleCloseModalRegister = () => setOpenModalRegister(false);
+
+  const handleRegisterInputChange = (e) => {
+    const { name, value } = e.target;
+    setRegisterData({ ...registerData, [name]: value });
+  };
+
+  const handleRegisterSubmit = (e) => {
+    e.preventDefault();
+    console.log("Datos de registro enviados:", registerData);
+    // Aquí puedes integrar el servicio de registro
+    handleCloseModalRegister();
   };
 
   return (
@@ -92,9 +111,13 @@ function Home() {
               </a>
             </li>
           </ul>
-        <button className={styles.registerButton}>Regístrate</button>
+          <button 
+            className={styles.registerButton} 
+            onClick={handleOpenModalRegister}
+          >
+            Regístrate
+          </button>
         </nav>
-
 
         {/* Header */}
         <div id="home">
@@ -185,8 +208,7 @@ function Home() {
             <Card
               person={{
                 name: "Belén Humbert",
-                description: `¡Hola! Soy Belén Humbert, profesional en auditoría, QA, diseño UX/UI y metodologías ágiles como Scrum. Me especializo en garantizar la calidad de productos digitales, aplicando principios de usabilidad y diseño centrado en el usuario.
-            Como Auditora y QA, aseguro el cumplimiento de estándares y la detección de problemas. En diseño UX/UI, creo interfaces que mejoran la experiencia del usuario. Como Scrum Master, lidero equipos ágiles para alcanzar objetivos con eficiencia. Estoy comprometida con la excelencia y la calidad en cada proyecto.`,
+                description: `¡Hola! Soy Belén Humbert, profesional en auditoría, QA, diseño UX/UI y metodologías ágiles como Scrum. Me especializo en garantizar la calidad de productos digitales, aplicando principios de usabilidad y diseño centrado en el usuario. Como Auditora y QA, aseguro el cumplimiento de estándares y la detección de problemas. En diseño UX/UI, creo interfaces que mejoran la experiencia del usuario. Como Scrum Master, lidero equipos ágiles para alcanzar objetivos con eficiencia. Estoy comprometida con la excelencia y la calidad en cada proyecto.`,
                 imagen: imagenBel,
                 alt: "Foto de Belen",
               }}
@@ -195,76 +217,56 @@ function Home() {
         </div>
 
         {/* Footer */}
-        <footer id="footer" className={styles.footer}>
-          <div className={styles.footerContainer}>
-            <div className={styles.footerLeft}>
-              <h2>AuditaWeb Solutions</h2>
-            </div>
-            <div className={styles.footerCenter}>
-              <ul className={styles.footerMenu}>
-                {/* Agregar enlaces ancla */}
-                <li>
-                  <a href="#about" className={styles.footerLink}>
-                    Sobre Nosotros
-                  </a>
-                </li>
-                <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
-                  Contacto
-                </li>
-                <li>
-                  <a href="#portfolio" className={styles.footerLink}>
-                    Auditorías
-                  </a>
-                </li>
-              </ul>
-              <p>© 2024 AWS</p>
-            </div>
-            <div className={styles.footerRight}>
-              <ul className={styles.footerSocials}>
-                <li>
-                  <a
-                    href="https://www.facebook.com/sebastian.montuori.1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FacebookIcon />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://x.com/belhumbert"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <XIcon />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/bel_humbert/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <InstagramIcon />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/bel%C3%A9n-humbert/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LinkedInIcon />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+<footer id="footer" className={styles.footer}>
+  <div className={styles.footerContainer}>
+    <div className={styles.footerLeft}>
+      <h2>AuditaWeb Solutions</h2>
+    </div>
+    <div className={styles.footerCenter}>
+      <ul className={styles.footerMenu}>
+        <li>
+          <a href="#about" className={styles.footerLink}>
+            Sobre Nosotros
+          </a>
+        </li>
+        <li onClick={handleOpenModal} style={{ cursor: "pointer" }}>
+          Contacto
+        </li>
+        <li>
+          <a href="#portfolio" className={styles.footerLink}>
+            Auditorías
+          </a>
+        </li>
+      </ul>
+      <p>© 2024 AWS</p>
+    </div>
+    <div className={styles.footerRight}>
+      <ul className={styles.footerSocials}>
+        <li>
+          <a href="https://www.facebook.com/">
+            <FacebookIcon />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/">
+            <InstagramIcon />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/">
+            <LinkedInIcon />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
 
         {/* Modal de Contacto */}
         <Modal open={openModal} onClose={handleCloseModal}>
           <Box
+          className={styles.modalContact}
             sx={{
               position: "absolute",
               top: "50%",
@@ -285,13 +287,13 @@ function Home() {
             >
               <CloseIcon />
             </IconButton>
-            <Typography variant="h6" component="h2" sx={{ color: "#f45027" }}>
+            <Typography id="modal-title" variant="h6" component="h2" sx={{ color: "#f45027"}}>
               Contáctanos
             </Typography>
             <form onSubmit={handleSubmit}>
               <TextField
-                name="name"
                 label="Nombre"
+                name="name"
                 fullWidth
                 margin="normal"
                 onChange={handleInputChange}
@@ -309,9 +311,8 @@ function Home() {
                 }}
               />
               <TextField
+                label="Email"
                 name="email"
-                label="Correo Electrónico"
-                type="email"
                 fullWidth
                 margin="normal"
                 onChange={handleInputChange}
@@ -329,8 +330,8 @@ function Home() {
                 }}
               />
               <TextField
-                name="telefono"
                 label="Teléfono"
+                name="telefono"
                 fullWidth
                 margin="normal"
                 onChange={handleInputChange}
@@ -348,8 +349,8 @@ function Home() {
                 }}
               />
               <TextField
-                name="message"
                 label="Mensaje"
+                name="message"
                 fullWidth
                 margin="normal"
                 multiline
@@ -368,16 +369,118 @@ function Home() {
                     },
                 }}
               />
-              <Button
-                type="submit"
-                variant="contained"
+              <Button type="submit" variant="contained" color="primary" fullWidth>
+                Enviar
+              </Button>
+            </form>
+          </Box>
+        </Modal>
+
+        {/* Modal de Registro */}
+        <Modal open={openModalRegister} onClose={handleCloseModalRegister}>
+          <Box
+           className={styles.modalRegister}
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 400,
+              bgcolor: "#282a2e",
+              borderRadius: 2,
+              boxShadow:
+                "0 20px 40px rgba(0, 0, 0, 0.8), 0 30px 60px rgba(0, 0, 0, 0.8)",
+              p: 4,
+              color: "#fff",
+            }}
+          >
+            <IconButton
+              onClick={handleCloseModalRegister}
+              sx={{ position: "absolute", top: 8, right: 8, color: "#f45027"}}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Typography id="modal-title" variant="h6" component="h2" sx={{ color: "#f45027" }}>
+              Regístrate para recibir novedades
+            </Typography>
+            <form onSubmit={handleRegisterSubmit}>
+              <TextField
+                label="Nombre"
+                name="name"
                 fullWidth
+                margin="normal"
+                onChange={handleRegisterInputChange}
+                requireds
                 sx={{
-                  bgcolor: "#f45027",
-                  color: "#141517",
-                  "&:hover": { bgcolor: "#ed7226" },
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
                 }}
-              >
+              />
+              <TextField
+                label="Apellido"
+                name="lastName"
+                fullWidth
+                margin="normal"
+                onChange={handleRegisterInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <TextField
+                label="Email"
+                name="email"
+                fullWidth
+                margin="normal"
+                onChange={handleRegisterInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <TextField
+                label="Ciudad de Residencia"
+                name="city"
+                fullWidth
+                margin="normal"
+                onChange={handleRegisterInputChange}
+                required
+                sx={{
+                  input: { color: "#aba7a6" },
+                  "& .MuiInputLabel-root": { color: "#aba7a6" },
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#f45027",
+                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#f45027",
+                    },
+                }}
+              />
+              <Button type="submit" variant="contained" color="primary" fullWidth>
                 Enviar
               </Button>
             </form>
