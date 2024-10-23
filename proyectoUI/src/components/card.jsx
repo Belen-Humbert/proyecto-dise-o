@@ -47,6 +47,8 @@ export default function CardPerson({ person }) {
       width: "100%", // El Card toma el 100% del ancho del contenedor en pantallas pequeñas
       margin: "auto", // Centra la tarjeta si hay espacio extra
       backgroundColor: "#141517",
+      transition: "transform 0.3s ease-in-out",
+      "&:hover": { transform: "scale(1.05)" },
     }}>
       <CardMedia
         component="img"

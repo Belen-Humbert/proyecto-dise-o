@@ -7,7 +7,8 @@ import CardActionArea from "@mui/material/CardActionArea";
 
 export default function Tarjeta({ empresa }) {
   return (
-    <Card sx={{ width: 310, height: 340, flexDirection: 'column' }}>
+    <Card sx={{ width: 310, height: 340, flexDirection: 'column', transition: "transform 0.3s ease-in-out",
+    "&:hover": { transform: "scale(1.05)" }, }}>
       <CardActionArea >
         <CardMedia
           component="img"
