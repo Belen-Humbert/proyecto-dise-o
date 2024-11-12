@@ -21,6 +21,8 @@ import logoInterluz from "../assets/imagenes/LOGOinterluz.jpeg";
 import imagenAl from "../assets/imagenes/alejo.jpeg";
 import imagenBel from "../assets/imagenes/belen.jpg";
 import Tarjeta from "../components/tarjeta";
+//const response = await fetch('http://localhost:5000/register');
+
 
 function Home() {
   const [openModal, setOpenModal] = useState(false);
