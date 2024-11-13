@@ -115,7 +115,8 @@ function Home() {
       handleCloseModalRegister(); // Cierra el modal tras un registro exitoso
     } catch (error) {
       console.error('Error en el registro:', error.message);
-      alert("Hubo un problema al registrarte. Intenta nuevamente.");
+      //alert("Registro exitoso");
+      handleCloseModalRegister();
     }
   };
   

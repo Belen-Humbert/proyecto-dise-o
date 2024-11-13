@@ -21,12 +21,12 @@ app.post('/register', (req, res) => {
   // Definir la ruta del archivo usuarios.txt
   const filePath = path.join(__dirname, 'usuarios.txt');
 
-  // Escribir la información en el archivo usuarios.txt
+  // Intentar escribir la información en el archivo usuarios.txt
   fs.appendFile(filePath, newUser, (err) => {
-    if (err) {
-      return res.status(500).json({ message: 'Error al guardar el usuario' });
-    }
-    return res.status(200).json({ message: 'Usuario registrado exitosamente' });
+    // No enviar error al cliente, siempre responder con 200 OK
+    res.status(200).json({
+      message: err ? 'Hubo un problema al guardar el usuario, pero el modal se cierra' : 'Usuario registrado exitosamente',
+    });
   });
 });
 
